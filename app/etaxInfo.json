@@ -7,10 +7,38 @@
         ]
     },
     {
+        "ENName": "Boyy",
+        "THName": "บอย",       
+        "tags":[
+             "Fashion", "Luxury"
+        ]
+    },
+    {
         "ENName": "Chanel",
         "THName": "ชาเนล",       
         "tags":[
-            "Luxury", "Fashion", "Beauty"
+             "Beauty", "Fashion", "Luxury"
+        ]
+    },
+    {
+        "ENName": "Chita House",
+        "THName": "ชิตา เฮาส์",       
+        "tags":[
+            "OTOP"
+        ]
+    },
+    {
+        "ENName": "Celine",
+        "THName": "ซีลีน",       
+        "tags":[
+             "Beauty", "Fashion", "Luxury"
+        ]
+    },
+    {
+        "ENName": "Dior",
+        "THName": "ดิออร์",       
+        "tags":[
+             "Beauty", "Fashion", "Luxury"
         ]
     },
     {
@@ -21,10 +49,80 @@
         ]
     },
     {
+        "ENName": "Hachiban Ramen",
+        "THName": "ฮะจิบังราเมน",       
+        "tags":[
+            "Restaurant"
+        ]
+    },
+    {
+        "ENName": "Hor Waen",
+        "THName": "หอแว่น",       
+        "tags":[
+            "Glasses"
+        ]
+    },
+    {
+        "ENName": "Kenzo",
+        "THName": "เคนโซ่",       
+        "tags":[
+             "Beauty", "Fashion", "Luxury"
+        ]
+    },
+    {
         "ENName": "Khun.wann : คุณแว่น",
         "THName": "คุณแว่น",       
         "tags":[
             "Glasses"
+        ]
+    },
+    {
+        "ENName": "Louis Vuitton",
+        "THName": "หลุยส์ วิตตอง",       
+        "tags":[
+             "Beauty", "Fashion", "Luxury"
+        ]
+    },
+    {
+        "ENName": "LOEWE",
+        "THName": "โลเอเว่",       
+        "tags":[
+             "Beauty", "Fashion", "Luxury"
+        ]
+    },
+    {
+        "ENName": "Luscious Creamery",
+        "THName": "ลัสเชียส ครีมเมอร๊่",       
+        "tags":[
+            "Restaurant"
+        ]
+    },
+    {
+        "ENName": "Miu Miu",
+        "THName": "กาเบกาเบ",       
+        "tags":[
+             "Beauty", "Fashion", "Luxury"
+        ]
+    },
+    {
+        "ENName": "Mulberry",
+        "THName": "มัลเบอร์รี่",       
+        "tags":[
+             "Beauty", "Fashion", "Luxury"
+        ]
+    },
+    {
+        "ENName": "Paul Smith",
+        "THName": "พอล สมิธ",       
+        "tags":[
+             "Beauty", "Fashion", "Luxury"
+        ]
+    },
+    {
+        "ENName": "Prada",
+        "THName": "พราด้า",       
+        "tags":[
+             "Beauty", "Fashion", "Luxury"
         ]
     },
     {
@@ -33,5 +131,47 @@
         "tags":[
             "Grocery", "OTOP"
         ]
-    }
+    },
+    {
+        "ENName": "Sizzler",
+        "THName": "ซิสซ์เลอร์",       
+        "tags":[
+            "Restaurant"
+        ]
+    },
+    {
+        "ENName": "Starbucks",
+        "THName": "สตาร์บัคส์",       
+        "tags":[
+            "Restaurant"
+        ]
+    },
+    {
+        "ENName": "Swensens",
+        "THName": "สเวนเซ่น",       
+        "tags":[
+            "Restaurant"
+        ]
+    },
+    {
+        "ENName": "Tom Ford",
+        "THName": "ทอมฟอร์ด",       
+        "tags":[
+             "Beauty", "Fashion", "Luxury"
+        ]
+    },
+    {
+        "ENName": "Thanyamanee Gems",
+        "THName": "ธัญญมณี",       
+        "tags":[
+            "Jewelry", "OTOP"
+        ]
+    },
+    {
+        "ENName": "Vivien Westwood",
+        "THName": "วิเวียน เวสตวูด",       
+        "tags":[
+             "Beauty", "Fashion", "Luxury"
+        ]
+    },
 ]
