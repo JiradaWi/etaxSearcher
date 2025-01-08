@@ -11,7 +11,7 @@ export default function Home() {
  
   const [inputValue, setInputValue] = useState('')
 
-  function checkEnter(e){
+  function checkEnter(e: { keyCode: unknown; which: unknown; }){
     const code = (e.keyCode ? e.keyCode : e.which);
     if(code == 13) { //Enter keycode
       handleSearch();
