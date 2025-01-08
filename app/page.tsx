@@ -2,14 +2,13 @@
 
 // import TableItem from './tableItem'
 import ETAXJSON from "./etaxInfo.json";
-import { ReactNode, ReactPortal, useEffect, useState } from "react";
+import { ReactNode, useState } from "react";
 
 // const userSearch = '';
 let tableItem:  ReactNode[]= [];
 
 export default function Home() {
-  // const [searchText, setSearchText] = useState({ searchTextbox: "" });
-
+ 
   const [inputValue, setInputValue] = useState('')
 
   function checkEnter(e){
@@ -21,7 +20,7 @@ export default function Home() {
   }
 
   function handleSearch() {    
-   
+    console.log('handle search 1');
     const result: ReactNode[] = [];
     let index = 1 ;
     const searchText = inputValue.toUpperCase();
@@ -79,6 +78,7 @@ export default function Home() {
   
    
     tableItem = result;
+    console.log('handle search 2');
     // return result;
    
   }
@@ -90,7 +90,7 @@ export default function Home() {
 
 
 
-
+  handleSearch();
 
   return (
     <div className="">
@@ -116,7 +116,7 @@ export default function Home() {
 
       <div style={{ margin: "2%" }}>
         <div className="grid grid-cols-4 gap-4">
-          <div className="col-span-3 sm:col-span-4 md:col-span-4 lg:col-span-3 xl:col-span-3">
+          <div className="col-span-4 sm:col-span-4 md:col-span-4 lg:col-span-4 xl:col-span-4">
             <div className="flex items-center rounded-md bg-white pl-3 outline outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
               <input
                 onChange={(e) => setInputValue(e.target.value)}
@@ -130,7 +130,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="col-span-1 sm:col-span-4 md:col-span-4 lg:col-span-1 xl:col-span-1">
+          {/* <div className="col-span-1 sm:col-span-4 md:col-span-4 lg:col-span-1 xl:col-span-1">
             <button
               style={{ width: "100%" }}
               onClick={handleSearch}
@@ -139,7 +139,7 @@ export default function Home() {
             >
               Search
             </button>
-          </div>
+          </div> */}
         </div>
 
         <br />
