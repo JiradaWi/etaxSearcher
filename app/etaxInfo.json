@@ -1,178 +1,742 @@
 [
     {
-        "ENName": "AKA",
-        "THName": "อากะ",       
-        "tags":[
-            "Restaurant"
-        ]
+      "ENName": "AKA",
+      "THName": "อากะ",
+      "tags": [
+        "Restaurant"
+      ]
     },
     {
-        "ENName": "Boyy",
-        "THName": "บอย",       
-        "tags":[
-             "Fashion", "Luxury"
-        ]
+      "ENName": "Advice",
+      "THName": "แอดไวซ์",
+      "tags": [
+        "Electronic"
+      ]
     },
     {
-        "ENName": "Chanel",
-        "THName": "ชาเนล",       
-        "tags":[
-             "Beauty", "Fashion", "Luxury"
-        ]
+      "ENName": "B-Quik",
+      "THName": "บีควิก",
+      "tags": [
+        "Car"
+      ]
     },
     {
-        "ENName": "Chita House",
-        "Note": "ขายตะหลิวไม้สัก",
-        "THName": "ชิตา เฮาส์",       
-        "tags":[
-            "OTOP"
-        ]
+      "ENName": "B2S",
+      "THName": "บีทูเอส",
+      "tags": [
+        "Books"
+      ]
     },
     {
-        "ENName": "Celine",
-        "THName": "ซีลีน",       
-        "tags":[
-             "Beauty", "Fashion", "Luxury"
-        ]
+      "ENName": "BEAUTRIUM",
+      "THName": "บิวเทรี่ยม",
+      "tags": [
+        "Beauty"
+      ]
     },
     {
-        "ENName": "Dior",
-        "THName": "ดิออร์",       
-        "tags":[
-             "Beauty", "Fashion", "Luxury"
-        ]
+      "ENName": "Banana",
+      "THName": "บานาน่า",
+      "tags": [
+        "Electronic"
+      ]
     },
     {
-        "ENName": "Doi Kham",
-        "THName": "ดอยคำ",       
-        "tags":[
-            "Grocery", "OTOP"
-        ]
+      "ENName": "Banana Run",
+      "THName": "บานาน่ารัน",
+      "tags": [
+        "Sport"
+      ]
     },
     {
-        "ENName": "Hachiban Ramen",
-        "THName": "ฮะจิบังราเมน",       
-        "tags":[
-            "Restaurant"
-        ]
+      "ENName": "Bangkok Mariott Maquis Queenspark",
+      "Note": "หิวโกจิค่ะแม่ขา",
+      "THName": "แบงค็อก แมริออท มาร์คีส์ ควีนส์ปาร์ค",
+      "tags": [
+        "Hotel"
+      ]
     },
     {
-        "ENName": "Hor Waen",
-        "THName": "หอแว่น",       
-        "tags":[
-            "Glasses"
-        ]
+      "ENName": "Big C",
+      "THName": "บิ๊กซี ",
+      "tags": [
+        "Grocery"
+      ]
     },
     {
-        "ENName": "Kenzo",
-        "THName": "เคนโซ่",       
-        "tags":[
-             "Beauty", "Fashion", "Luxury"
-        ]
+      "ENName": "Boots",
+      "THName": "บูทส์",
+      "tags": [
+        "Beauty"
+      ]
     },
     {
-        "ENName": "Khun.wann : คุณแว่น",
-        "THName": "คุณแว่น",       
-        "tags":[
-            "Glasses"
-        ]
+      "ENName": "Boyy",
+      "THName": "บอย",
+      "tags": [
+        "Fashion",
+        "Luxury"
+      ]
     },
     {
-        "ENName": "Louis Vuitton",
-        "THName": "หลุยส์ วิตตอง",       
-        "tags":[
-             "Beauty", "Fashion", "Luxury"
-        ]
+      "ENName": "CJ",
+      "THName": "ซีเจ",
+      "tags": [
+        "Grocery"
+      ]
     },
     {
-        "ENName": "LOEWE",
-        "THName": "โลเอเว่",       
-        "tags":[
-             "Beauty", "Fashion", "Luxury"
-        ]
+      "ENName": "Celine",
+      "THName": "ซีลีน",
+      "tags": [
+        "Beauty",
+        "Fashion",
+        "Luxury"
+      ]
     },
     {
-        "ENName": "Luscious Creamery",
-        "THName": "ลัสเชียส ครีมเมอรี่",       
-        "tags":[
-            "Restaurant"
-        ]
+      "ENName": "Central",
+      "THName": "เซ็นทรัล",
+      "tags": [
+        "Retail"
+      ]
     },
     {
-        "ENName": "Miu Miu",
-        "THName": "กาเบกาเบ",       
-        "tags":[
-             "Beauty", "Fashion", "Luxury"
-        ]
+      "ENName": "Chanel",
+      "THName": "ชาเนล",
+      "tags": [
+        "Beauty",
+        "Fashion",
+        "Luxury"
+      ]
     },
     {
-        "ENName": "Mulberry",
-        "THName": "มัลเบอร์รี่",       
-        "tags":[
-             "Beauty", "Fashion", "Luxury"
-        ]
+      "ENName": "Chiangmai Mariott Hotel",
+      "THName": "เชียงใหม่ แมริออท โฮเทล",
+      "tags": [
+        "Hotel"
+      ]
     },
     {
-        "ENName": "Paul Smith",
-        "THName": "พอล สมิธ",       
-        "tags":[
-             "Beauty", "Fashion", "Luxury"
-        ]
+      "ENName": "Chita House",
+      "Note": "ขายตะหลิวไม้สัก",
+      "THName": "ชิตา เฮาส์",
+      "tags": [
+        "OTOP"
+      ]
     },
     {
-        "ENName": "Prada",
-        "THName": "พราด้า",       
-        "tags":[
-             "Beauty", "Fashion", "Luxury"
-        ]
+      "ENName": "Cockpit",
+      "THName": "คอกพิท",
+      "tags": [
+        "Car"
+      ]
     },
     {
-        "ENName": "Salana",
-        "THName": "ศาลานา",       
-        "tags":[
-            "Grocery", "OTOP"
-        ]
+      "ENName": "Cold Stone",
+      "THName": "โคลด์สโตน",
+      "tags": [
+        "Restaurant"
+      ]
     },
     {
-        "ENName": "Sizzler",
-        "THName": "ซิสซ์เลอร์",       
-        "tags":[
-            "Restaurant"
-        ]
+      "ENName": "Crocs",
+      "THName": "ครอก",
+      "tags": [
+        "Fashion"
+      ]
     },
     {
-        "ENName": "Starbucks",
-        "THName": "สตาร์บัคส์",       
-        "tags":[
-            "Restaurant"
-        ]
+      "ENName": "Cute Press",
+      "THName": "คิ้วเพรส",
+      "tags": [
+        "Beauty"
+      ]
     },
     {
-        "ENName": "Swensens",
-        "THName": "สเวนเซ่น",       
-        "tags":[
-            "Restaurant"
-        ]
+      "ENName": "Decathlon",
+      "THName": "ดีแคทลอน",
+      "tags": [
+        "Fashion",
+        "Sport"
+      ]
     },
     {
-        "ENName": "Tom Ford",
-        "THName": "ทอมฟอร์ด",       
-        "tags":[
-             "Beauty", "Fashion", "Luxury"
-        ]
+      "ENName": "Dior",
+      "Note": "เหมือนจะได้แค่บิวตี้มั้ง",
+      "THName": "ดิออร์",
+      "tags": [
+        "Beauty"
+      ]
     },
     {
-        "ENName": "Thanyamanee Gems",
-        "THName": "ธัญญมณี",       
-        "tags":[
-            "Jewelry", "OTOP"
-        ]
+      "ENName": "Do Home",
+      "THName": "ดูโฮม ",
+      "tags": [
+        "Furniture"
+      ]
     },
     {
-        "ENName": "Vivien Westwood",
-        "THName": "วิเวียน เวสตวูด",       
-        "tags":[
-             "Beauty", "Fashion", "Luxury"
-        ]
+      "ENName": "Doi Kham",
+      "THName": "ดอยคำ",
+      "tags": [
+        "Grocery",
+        "OTOP"
+      ]
+    },
+    {
+      "ENName": "Doubletree By Hilton Sukhumvit Bangkok",
+      "THName": "ดับเบิ้ลทรี บาย ฮิลตัน สุขุมวิท กรุงเทพ",
+      "tags": [
+        "Hotel"
+      ]
+    },
+    {
+      "ENName": "Dyson",
+      "THName": "ไดสัน",
+      "tags": [
+        "Electronic"
+      ]
+    },
+    {
+      "ENName": "EVEANDBOY",
+      "THName": "อีฟแอนด์บอย ",
+      "tags": [
+        "Beauty"
+      ]
+    },
+    {
+      "ENName": "Elle",
+      "THName": "เอล",
+      "tags": [
+        "Fashion"
+      ]
+    },
+    {
+      "ENName": "Emporium",
+      "THName": "เอ็มโพเรียม",
+      "tags": [
+        "Retail"
+      ]
+    },
+    {
+      "ENName": "Garmin",
+      "THName": "การ์มิน",
+      "tags": [
+        "Fashion",
+        "Sport"
+      ]
+    },
+    {
+      "ENName": "Global House",
+      "THName": "โกลบอลเฮ้าส์",
+      "tags": [
+        "Furniture"
+      ]
+    },
+    {
+      "ENName": "Hachiban Ramen",
+      "THName": "ฮะจิบังราเมน",
+      "tags": [
+        "Restaurant"
+      ]
+    },
+    {
+      "ENName": "Hermes",
+      "Note": "เหมือนจะได้แค่บิวตี้ แต่ลองซื้อเบอร์กิ้นให้ก็ได้นะ <3",
+      "THName": "แอร์เมส",
+      "tags": [
+        "Beauty",
+        "Luxury"
+      ]
+    },
+    {
+      "ENName": "Holiday Inn Exprerss Bangkok Sathorn",
+      "THName": "ฮอลิเดย์ อินน์ เอ็กซ์เพรส กรุงเทพ สาทร",
+      "tags": [
+        "Hotel"
+      ]
+    },
+    {
+      "ENName": "HomePro",
+      "THName": "โฮมโปร ",
+      "tags": [
+        "Furniture"
+      ]
+    },
+    {
+      "ENName": "Hor Waen",
+      "THName": "หอแว่น",
+      "tags": [
+        "Glasses"
+      ]
+    },
+    {
+      "ENName": "ICONSIAM",
+      "THName": "ไอคอนสยาม",
+      "tags": [
+        "Retail"
+      ]
+    },
+    {
+      "ENName": "IKEA",
+      "Note": "หรือมันควรอ่านว่าไอเกียฟระ",
+      "THName": "อิเกีย",
+      "tags": [
+        "Furniture"
+      ]
+    },
+    {
+      "ENName": "IT City",
+      "THName": "ไอทีซิตี้",
+      "tags": [
+        "Electronic"
+      ]
+    },
+    {
+      "ENName": "Index Living Mall",
+      "THName": "อินเด็กซ์ลิฟวิ่งมอลล์",
+      "tags": [
+        "Furniture"
+      ]
+    },
+    {
+      "ENName": "Intercontinental Chiangmai Maeping Hotel",
+      "THName": "อินเตอร์คอนติเนนตัล เชียงใหม่ แม่ปิง โฮเทล",
+      "tags": [
+        "Hotel"
+      ]
+    },
+    {
+      "ENName": "JIB",
+      "THName": "จิ๊บ",
+      "tags": [
+        "Electronic"
+      ]
+    },
+    {
+      "ENName": "KFC",
+      "THName": "เคเอฟซี",
+      "tags": [
+        "Restaurant"
+      ]
+    },
+    {
+      "ENName": "KT OPTIC",
+      "THName": "เคทีออปติค",
+      "tags": [
+        "Glasses"
+      ]
+    },
+    {
+      "ENName": "Katsuya",
+      "THName": "คัตสึยะ",
+      "tags": [
+        "Restaurant"
+      ]
+    },
+    {
+      "ENName": "Kenzo",
+      "THName": "เคนโซ่",
+      "tags": [
+        "Beauty",
+        "Fashion",
+        "Luxury"
+      ]
+    },
+    {
+      "ENName": "Khun.wann : คุณแว่น",
+      "THName": "คุณแว่น",
+      "tags": [
+        "Glasses"
+      ]
+    },
+    {
+      "ENName": "Kiehls",
+      "THName": "คีลส์",
+      "tags": [
+        "Beauty"
+      ]
+    },
+    {
+      "ENName": "Kinokuniya",
+      "THName": "คิโนะคูนิยะ",
+      "tags": [
+        "Books"
+      ]
+    },
+    {
+      "ENName": "LOEWE",
+      "THName": "โลเอเว่",
+      "tags": [
+        "Beauty",
+        "Fashion",
+        "Luxury"
+      ]
+    },
+    {
+      "ENName": "Le Meridian Bangkok",
+      "THName": "เลอ เมอริเดียน กรุงเทพ",
+      "tags": [
+        "Hotel"
+      ]
+    },
+    {
+      "ENName": "Lotus",
+      "THName": "โลตัส ",
+      "tags": [
+        "Grocery"
+      ]
+    },
+    {
+      "ENName": "Louis Vuitton",
+      "THName": "หลุยส์ วิตตอง",
+      "tags": [
+        "Beauty",
+        "Fashion",
+        "Luxury"
+      ]
+    },
+    {
+      "ENName": "Luscious Creamery",
+      "THName": "ลัสเชียส ครีมเมอรี่",
+      "tags": [
+        "Restaurant"
+      ]
+    },
+    {
+      "ENName": "Makro",
+      "THName": "แม็คโคร ",
+      "tags": [
+        "Grocery"
+      ]
+    },
+    {
+      "ENName": "McDonald",
+      "THName": "แมคโดนัลด์",
+      "tags": [
+        "Restaurant"
+      ]
+    },
+    {
+      "ENName": "Meb",
+      "THName": "เม๊บ",
+      "tags": [
+        "Books"
+      ]
+    },
+    {
+      "ENName": "Miu Miu",
+      "THName": "กาเบกาเบ",
+      "tags": [
+        "Beauty",
+        "Fashion",
+        "Luxury"
+      ]
+    },
+    {
+      "ENName": "Modernform",
+      "THName": "โมเดอร์นฟอร์ม",
+      "tags": [
+        "Furniture"
+      ]
+    },
+    {
+      "ENName": "Mulberry",
+      "THName": "มัลเบอร์รี่",
+      "tags": [
+        "Beauty",
+        "Fashion",
+        "Luxury"
+      ]
+    },
+    {
+      "ENName": "Multy Beauty",
+      "THName": "มัลตี้บิวตี้",
+      "tags": [
+        "Beauty"
+      ]
+    },
+    {
+      "ENName": "Munkong Gadget",
+      "THName": "มั่นคงแก๊ดเจ็ต",
+      "tags": [
+        "Electronic"
+      ]
+    },
+    {
+      "ENName": "Naiin",
+      "THName": "นายอินทร์",
+      "tags": [
+        "Beauty",
+        "Fashion",
+        "Luxury"
+      ]
+    },
+    {
+      "ENName": "Ootoya",
+      "THName": "โอโตยะ",
+      "tags": [
+        "Restaurant"
+      ]
+    },
+    {
+      "ENName": "Owndays",
+      "Note": "ถอดภาษาไทยให้ไม่ถูกละแม่",
+      "THName": "โอนเดย์ส์",
+      "tags": [
+        "Glasses"
+      ]
+    },
+    {
+      "ENName": "Paragon",
+      "THName": "พารากอน",
+      "tags": [
+        "Retail"
+      ]
+    },
+    {
+      "ENName": "Paris Miki Thailand",
+      "THName": "ปารีส มิกิ ไทยแลนด์",
+      "tags": [
+        "Glasses"
+      ]
+    },
+    {
+      "ENName": "Paul Smith",
+      "THName": "พอล สมิธ",
+      "tags": [
+        "Beauty",
+        "Fashion",
+        "Luxury"
+      ]
+    },
+    {
+      "ENName": "Peppeer Lunch",
+      "THName": "เปปเปอร์ลันช์",
+      "tags": [
+        "Restaurant"
+      ]
+    },
+    {
+      "ENName": "Polo Ralph Lauren",
+      "THName": "โปโล ราล์ฟ ลอเรน",
+      "tags": [
+        "Fashion",
+        "Luxury"
+      ]
+    },
+    {
+      "ENName": "PowerBuy",
+      "THName": "พาวเวอร์บาย",
+      "tags": [
+        "Electronic"
+      ]
+    },
+    {
+      "ENName": "Prada",
+      "THName": "พราด้า",
+      "tags": [
+        "Beauty",
+        "Fashion",
+        "Luxury"
+      ]
+    },
+    {
+      "ENName": "Robinson",
+      "THName": "โรบินสัน",
+      "tags": [
+        "Grocery"
+      ]
+    },
+    {
+      "ENName": "SB Design Square",
+      "THName": "เอสบี ดีไซน์ สแควร์",
+      "tags": [
+        "Furniture"
+      ]
+    },
+    {
+      "ENName": "Salad Factory",
+      "THName": "สลัดแฟคตอรี่",
+      "tags": [
+        "Restaurant"
+      ]
+    },
+    {
+      "ENName": "Salana",
+      "THName": "ศาลานา",
+      "tags": [
+        "Grocery",
+        "OTOP"
+      ]
+    },
+    {
+      "ENName": "Se-ed",
+      "THName": "ซีเอ็ด",
+      "tags": [
+        "Books"
+      ]
+    },
+    {
+      "ENName": "Shabuton",
+      "THName": "ชาบูตง",
+      "tags": [
+        "Restaurant"
+      ]
+    },
+    {
+      "ENName": "Siam Takashimaya",
+      "THName": "สยาม ทากาชิมาย่า",
+      "tags": [
+        "Grocery"
+      ]
+    },
+    {
+      "ENName": "Sizzler",
+      "THName": "ซิสซ์เลอร์",
+      "tags": [
+        "Restaurant"
+      ]
+    },
+    {
+      "ENName": "Somtum Nua",
+      "THName": "ส้มตำนัว",
+      "tags": [
+        "Restaurant"
+      ]
+    },
+    {
+      "ENName": "Starbucks",
+      "THName": "สตาร์บัคส์",
+      "tags": [
+        "Restaurant"
+      ]
+    },
+    {
+      "ENName": "Studio 7",
+      "THName": "สตูดิโอ 7",
+      "tags": [
+        "Electronic"
+      ]
+    },
+    {
+      "ENName": "Supersport",
+      "THName": "ซูเปอร์สปอร์ต",
+      "tags": [
+        "Sport"
+      ]
+    },
+    {
+      "ENName": "Swensens",
+      "THName": "สเวนเซ่น",
+      "tags": [
+        "Restaurant"
+      ]
+    },
+    {
+      "ENName": "Tenya",
+      "THName": "เทนยะ",
+      "tags": [
+        "Restaurant"
+      ]
+    },
+    {
+      "ENName": "Thanyamanee Gems",
+      "THName": "ธัญญมณี",
+      "tags": [
+        "Jewelry",
+        "OTOP"
+      ]
+    },
+    {
+      "ENName": "The Antheenee Hotel Bangkok",
+      "THName": "ดิ แอทธินี โฮเทล แบงค็อก",
+      "tags": [
+        "Hotel"
+      ]
+    },
+    {
+      "ENName": "The Mall",
+      "THName": "เดอะมอลล์",
+      "tags": [
+        "Grocery"
+      ]
+    },
+    {
+      "ENName": "Tom Ford",
+      "THName": "ทอมฟอร์ด",
+      "tags": [
+        "Beauty",
+        "Fashion",
+        "Luxury"
+      ]
+    },
+    {
+      "ENName": "Tops",
+      "THName": "ท็อปส์",
+      "tags": [
+        "Grocery"
+      ]
+    },
+    {
+      "ENName": "Uniqlo",
+      "THName": "ยูนิโคล",
+      "tags": [
+        "Fashion"
+      ]
+    },
+    {
+      "ENName": "Untitled Run",
+      "THName": "อันไตเติ้ลรัน",
+      "Note": "หรือควรอ่านว่ายูไนเต็ด?",
+      "tags": [
+        "Sport"
+      ]
+    },
+    {
+      "ENName": "Verasu",
+      "THName": "วีรสุ",
+      "tags": [
+        "Electronic"
+      ]
+    },
+    {
+      "ENName": "Vivien Westwood",
+      "THName": "วิเวียน เวสตวูด",
+      "tags": [
+        "Beauty",
+        "Fashion",
+        "Luxury"
+      ]
+    },
+    {
+      "ENName": "Wacoal",
+      "THName": "วาโก้",
+      "tags": [
+        "Fashion"
+      ]
+    },
+    {
+      "ENName": "Warrix",
+      "THName": "วาร์ริกซ์",
+      "tags": [
+        "Fashion",
+        "Sport"
+      ]
+    },
+    {
+      "ENName": "Washington1985",
+      "THName": "วอชิงตัน 1985",
+      "tags": [
+        "Glasses"
+      ]
+    },
+    {
+      "ENName": "Watsons",
+      "THName": "วัตสันส์",
+      "tags": [
+        "Beauty"
+      ]
     }
-]
+  ]
