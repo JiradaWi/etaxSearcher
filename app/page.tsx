@@ -35,7 +35,7 @@ export default function Home() {
           THName.includes(searchTextUpper) ||
           tags.includes(inputValue)
       ) {
-          const tags: object[] = [];
+          // const tags: object[] = [];
           element.tags.forEach(tag => {
               const key = ENName + tag;
               if(tag == 'OTOP'){
