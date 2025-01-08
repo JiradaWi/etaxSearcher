@@ -23,15 +23,15 @@ export default function Home() {
     console.log('handle search 1');
     const result: ReactNode[] = [];
     let index = 1 ;
-    const searchText = inputValue.toUpperCase();
+    const searchTextUpper = inputValue.toUpperCase();
     ETAXJSON.forEach((element) => {
       const ENName = element.ENName.toUpperCase();
       const THName = element.THName.toUpperCase();
       const tags = element.tags;
       if (
-          ENName.includes(searchText) ||
-          THName.includes(searchText) ||
-          tags.includes(searchText)
+          ENName.includes(searchTextUpper) ||
+          THName.includes(searchTextUpper) ||
+          tags.includes(inputValue)
       ) {
           const tags: object[] = [];
           element.tags.forEach(tag => {
