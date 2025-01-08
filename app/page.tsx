@@ -28,6 +28,8 @@ export default function Home() {
       const ENName = element.ENName.toUpperCase();
       const THName = element.THName.toUpperCase();
       const tags = element.tags;
+
+      const tagCMP: ReactNode[] = []; 
       if (
           ENName.includes(searchTextUpper) ||
           THName.includes(searchTextUpper) ||
@@ -37,13 +39,13 @@ export default function Home() {
           element.tags.forEach(tag => {
               const key = ENName + tag;
               if(tag == 'OTOP'){
-                  tags.push(
+                tagCMP.push(
                       <button key={key} className="py-2 px-4 shadow-md bg-green-300 no-underline rounded-full text-black border-blue btn-primary hover:bg-blue-light focus:outline-none active:shadow-none mr-2">
                           {tag}
                       </button>
                   );
               }else{
-                  tags.push(
+                tagCMP.push(
                       <button key={key} className="py-2 px-4 shadow-md bg-pink-200 no-underline rounded-full text-black border-blue btn-primary hover:bg-blue-light focus:outline-none active:shadow-none mr-2">
                           {tag}
                       </button>
@@ -64,7 +66,7 @@ export default function Home() {
           <td key={tdkey2} className="border px-4 py-2" data-name="THNAME">{element.THName}</td>
           <td key={tdkey3} className="border px-4 py-2" data-name="ENNAME">{element.ENName}</td>
           <td key={tdkey4} className="border px-4 py-2" data-name="TAGS">
-              {tags}
+              {tagCMP}
           </td>
           <td key={tdkey5} className="border px-4 py-2" data-name="ENNAME">{element.Note}</td>
         </tr>
