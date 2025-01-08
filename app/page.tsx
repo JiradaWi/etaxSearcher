@@ -3,16 +3,17 @@
 import TableItem from './tableItem'
 import { useState } from "react";
 
-let userSearch = 'OTOP';
+let userSearch = '';
 
 export default function Home() {
   // const [searchText, setSearchText] = useState({ searchTextbox: "" });
 
   const [inputValue, setInputValue] = useState('')
 
-  function handleSearch() {
+  function handleSearch(e) {
     
     userSearch = inputValue;
+    setInputValue(e.target.value)
     // TableItem
 
   }
@@ -20,7 +21,7 @@ export default function Home() {
   function checkEnter(e){
     const code = (e.keyCode ? e.keyCode : e.which);
     if(code == 13) { //Enter keycode
-      handleSearch();
+      handleSearch(e);
     }
 
   }
@@ -79,12 +80,13 @@ export default function Home() {
 
         <br />
         <table className="table-auto" style={{ width: "100%" }}>
-          <thead>
-            <tr>
+          <thead >
+            <tr >
               <th className="px-4 py-2">#</th>
               <th className="px-4 py-2">TH Name</th>
               <th className="px-4 py-2">EN Name</th>
               <th className="px-4 py-2">Tags</th>
+              <th className="px-4 py-2">Note</th>
             </tr>
           </thead>
           <tbody>

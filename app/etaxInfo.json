@@ -22,6 +22,7 @@
     },
     {
         "ENName": "Chita House",
+        "Note": "ขายตะหลิวไม้สัก",
         "THName": "ชิตา เฮาส์",       
         "tags":[
             "OTOP"
@@ -92,7 +93,7 @@
     },
     {
         "ENName": "Luscious Creamery",
-        "THName": "ลัสเชียส ครีมเมอร๊่",       
+        "THName": "ลัสเชียส ครีมเมอรี่",       
         "tags":[
             "Restaurant"
         ]
@@ -173,5 +174,5 @@
         "tags":[
              "Beauty", "Fashion", "Luxury"
         ]
-    },
+    }
 ]

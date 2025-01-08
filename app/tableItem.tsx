@@ -6,19 +6,32 @@ export default function Home(props: { searchText: string; }) {
 
   const result: object[] = [];
   let index = 1 ;
+  const searchText = props.searchText.toUpperCase();
   ETAXJSON.forEach((element) => {
+    const ENName = element.ENName.toUpperCase();
+    const THName = element.THName.toUpperCase();
+    const tags = element.tags;
     if (
-      element.ENName.includes(props.searchText) ||
-      element.THName.includes(props.searchText) ||
-      element.tags.includes(props.searchText)
+        ENName.includes(searchText) ||
+        THName.includes(searchText) ||
+        tags.includes(searchText)
     ) {
         const tags: object[] = [];
         element.tags.forEach(tag => {
-            tags.push(
-                <button className="py-2 px-4 shadow-md no-underline rounded-full text-black border-blue btn-primary hover:bg-blue-light focus:outline-none active:shadow-none mr-2">
-                    {tag}
-                </button>
-            );
+            if(tag == 'OTOP'){
+                tags.push(
+                    <button className="py-2 px-4 shadow-md bg-green-300 no-underline rounded-full text-black border-blue btn-primary hover:bg-blue-light focus:outline-none active:shadow-none mr-2">
+                        {tag}
+                    </button>
+                );
+            }else{
+                tags.push(
+                    <button className="py-2 px-4 shadow-md bg-pink-200 no-underline rounded-full text-black border-blue btn-primary hover:bg-blue-light focus:outline-none active:shadow-none mr-2">
+                        {tag}
+                    </button>
+                );
+            }
+            
         });
 
         const key = 'item'+index;
@@ -30,6 +43,7 @@ export default function Home(props: { searchText: string; }) {
         <td className="border px-4 py-2" data-name="TAGS">
             {tags}
         </td>
+        <td className="border px-4 py-2" data-name="ENNAME">{element.Note}</td>
       </tr>
       );
       index++;
