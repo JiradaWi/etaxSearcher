@@ -1,101 +1,99 @@
-import Image from "next/image";
+"use client";
+
+import TableItem from './tableItem'
+import { useState } from "react";
+
+let userSearch = 'OTOP';
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  // const [searchText, setSearchText] = useState({ searchTextbox: "" });
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const [inputValue, setInputValue] = useState('')
+
+  function handleSearch() {
+    
+    userSearch = inputValue;
+    // TableItem
+
+  }
+
+  function checkEnter(e){
+    const code = (e.keyCode ? e.keyCode : e.which);
+    if(code == 13) { //Enter keycode
+      handleSearch();
+    }
+
+  }
+
+  // const childRef = useRef();
+
+  return (
+    <div className="">
+      <nav className="bg-gray-800">
+        <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div className="relative flex h-16 items-center justify-between">
+            <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+              <div className="flex shrink-0 items-center"></div>
+              <div className="hidden sm:ml-6 sm:block">
+                <div className="flex space-x-4">
+                  <span
+                    className="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
+                    aria-current="page"
+                  >
+                    ETAX Searcher
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </nav>
+
+      <div style={{ margin: "2%" }}>
+        <div className="grid grid-cols-4 gap-4">
+          <div className="col-span-3 sm:col-span-4 md:col-span-4 lg:col-span-3 xl:col-span-3">
+            <div className="flex items-center rounded-md bg-white pl-3 outline outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
+              <input
+                onChange={(e) => setInputValue(e.target.value)}
+                onKeyUp={checkEnter}
+                type="text"
+                name="searchTextbox"
+                id="searchTextbox"
+                className="block min-w-0 grow py-1.5 pl-1 pr-3 text-base text-gray-900 placeholder:text-gray-400 focus:outline focus:outline-0 sm:text-sm/6"
+                placeholder="Search..."
+              />
+            </div>
+          </div>
+
+          <div className="col-span-1 sm:col-span-4 md:col-span-4 lg:col-span-1 xl:col-span-1">
+            <button
+              style={{ width: "100%" }}
+              onClick={handleSearch}
+              type="button"
+              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+
+        <br />
+        <table className="table-auto" style={{ width: "100%" }}>
+          <thead>
+            <tr>
+              <th className="px-4 py-2">#</th>
+              <th className="px-4 py-2">TH Name</th>
+              <th className="px-4 py-2">EN Name</th>
+              <th className="px-4 py-2">Tags</th>
+            </tr>
+          </thead>
+          <tbody>
+            <TableItem key="test" searchText={userSearch}></TableItem>
+           
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
+

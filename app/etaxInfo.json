@@ -1,0 +1,37 @@
+[
+    {
+        "ENName": "AKA",
+        "THName": "อากะ",       
+        "tags":[
+            "Restaurant"
+        ]
+    },
+    {
+        "ENName": "Chanel",
+        "THName": "ชาเนล",       
+        "tags":[
+            "Luxury", "Fashion", "Beauty"
+        ]
+    },
+    {
+        "ENName": "Doi Kham",
+        "THName": "ดอยคำ",       
+        "tags":[
+            "Grocery", "OTOP"
+        ]
+    },
+    {
+        "ENName": "Khun.wann : คุณแว่น",
+        "THName": "คุณแว่น",       
+        "tags":[
+            "Glasses"
+        ]
+    },
+    {
+        "ENName": "Salana",
+        "THName": "ศาลานา",       
+        "tags":[
+            "Grocery", "OTOP"
+        ]
+    }
+]
