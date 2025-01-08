@@ -1,32 +1,96 @@
 "use client";
 
-import TableItem from './tableItem'
-import { useState } from "react";
+// import TableItem from './tableItem'
+import ETAXJSON from "./etaxInfo.json";
+import { ReactNode, ReactPortal, useEffect, useState } from "react";
 
-let userSearch = '';
+// const userSearch = '';
+let tableItem:  ReactNode[]= [];
 
 export default function Home() {
   // const [searchText, setSearchText] = useState({ searchTextbox: "" });
 
   const [inputValue, setInputValue] = useState('')
 
-  function handleSearch(e) {
-    
-    userSearch = inputValue;
-    setInputValue(e.target.value)
-    // TableItem
-
-  }
-
   function checkEnter(e){
     const code = (e.keyCode ? e.keyCode : e.which);
     if(code == 13) { //Enter keycode
-      handleSearch(e);
+      handleSearch();
     }
 
   }
 
-  // const childRef = useRef();
+  function handleSearch() {    
+   
+    const result: ReactNode[] = [];
+    let index = 1 ;
+    const searchText = inputValue.toUpperCase();
+    ETAXJSON.forEach((element) => {
+      const ENName = element.ENName.toUpperCase();
+      const THName = element.THName.toUpperCase();
+      const tags = element.tags;
+      if (
+          ENName.includes(searchText) ||
+          THName.includes(searchText) ||
+          tags.includes(searchText)
+      ) {
+          const tags: object[] = [];
+          element.tags.forEach(tag => {
+              const key = ENName + tag;
+              if(tag == 'OTOP'){
+                  tags.push(
+                      <button key={key} className="py-2 px-4 shadow-md bg-green-300 no-underline rounded-full text-black border-blue btn-primary hover:bg-blue-light focus:outline-none active:shadow-none mr-2">
+                          {tag}
+                      </button>
+                  );
+              }else{
+                  tags.push(
+                      <button key={key} className="py-2 px-4 shadow-md bg-pink-200 no-underline rounded-full text-black border-blue btn-primary hover:bg-blue-light focus:outline-none active:shadow-none mr-2">
+                          {tag}
+                      </button>
+                  );
+              }
+              
+          });
+  
+          const trkey = 'item'+index;
+          const tdkey1 = 'itemtd1'+index;
+          const tdkey2 = 'itemtd2'+index;
+          const tdkey3 = 'itemtd3'+index;
+          const tdkey4 = 'itemtd4'+index;
+          const tdkey5 = 'itemtd5'+index;
+        result.push(
+          <tr key={trkey}>
+          <td key={tdkey1} className="border px-4 py-2" data-name="#">{index}</td>
+          <td key={tdkey2} className="border px-4 py-2" data-name="THNAME">{element.THName}</td>
+          <td key={tdkey3} className="border px-4 py-2" data-name="ENNAME">{element.ENName}</td>
+          <td key={tdkey4} className="border px-4 py-2" data-name="TAGS">
+              {tags}
+          </td>
+          <td key={tdkey5} className="border px-4 py-2" data-name="ENNAME">{element.Note}</td>
+        </tr>
+        );
+        index++;
+      }
+
+
+   
+    });
+  
+   
+    tableItem = result;
+    // return result;
+   
+  }
+
+
+
+  
+
+
+
+
+
 
   return (
     <div className="">
@@ -82,15 +146,16 @@ export default function Home() {
         <table className="table-auto" style={{ width: "100%" }}>
           <thead >
             <tr >
-              <th className="px-4 py-2">#</th>
-              <th className="px-4 py-2">TH Name</th>
-              <th className="px-4 py-2">EN Name</th>
-              <th className="px-4 py-2">Tags</th>
-              <th className="px-4 py-2">Note</th>
+              <th className="px-4 py-2" key="head1">#</th>
+              <th className="px-4 py-2" key="head2">TH Name</th>
+              <th className="px-4 py-2" key="head3">EN Name</th>
+              <th className="px-4 py-2" key="head4">Tags</th>
+              <th className="px-4 py-2" key="head5">Note</th>
             </tr>
           </thead>
           <tbody>
-            <TableItem key="test" searchText={userSearch}></TableItem>
+            {/* <TableItem key="test" searchText={userSearch}></TableItem> */}
+            {tableItem}
            
           </tbody>
         </table>
