@@ -1,742 +1,1093 @@
 [
-    {
-      "ENName": "AKA",
-      "THName": "อากะ",
-      "tags": [
-        "Restaurant"
-      ]
-    },
-    {
-      "ENName": "Advice",
-      "THName": "แอดไวซ์",
-      "tags": [
-        "Electronic"
-      ]
-    },
-    {
-      "ENName": "B-Quik",
-      "THName": "บีควิก",
-      "tags": [
-        "Car"
-      ]
-    },
-    {
-      "ENName": "B2S",
-      "THName": "บีทูเอส",
-      "tags": [
-        "Books"
-      ]
-    },
-    {
-      "ENName": "BEAUTRIUM",
-      "THName": "บิวเทรี่ยม",
-      "tags": [
-        "Beauty"
-      ]
-    },
-    {
-      "ENName": "Banana",
-      "THName": "บานาน่า",
-      "tags": [
-        "Electronic"
-      ]
-    },
-    {
-      "ENName": "Banana Run",
-      "THName": "บานาน่ารัน",
-      "tags": [
-        "Sport"
-      ]
-    },
-    {
-      "ENName": "Bangkok Mariott Maquis Queenspark",
-      "Note": "หิวโกจิค่ะแม่ขา",
-      "THName": "แบงค็อก แมริออท มาร์คีส์ ควีนส์ปาร์ค",
-      "tags": [
-        "Hotel"
-      ]
-    },
-    {
-      "ENName": "Big C",
-      "THName": "บิ๊กซี ",
-      "tags": [
-        "Grocery"
-      ]
-    },
-    {
-      "ENName": "Boots",
-      "THName": "บูทส์",
-      "tags": [
-        "Beauty"
-      ]
-    },
-    {
-      "ENName": "Boyy",
-      "THName": "บอย",
-      "tags": [
-        "Fashion",
-        "Luxury"
-      ]
-    },
-    {
-      "ENName": "CJ",
-      "THName": "ซีเจ",
-      "tags": [
-        "Grocery"
-      ]
-    },
-    {
-      "ENName": "Celine",
-      "THName": "ซีลีน",
-      "tags": [
-        "Beauty",
-        "Fashion",
-        "Luxury"
-      ]
-    },
-    {
-      "ENName": "Central",
-      "THName": "เซ็นทรัล",
-      "tags": [
-        "Retail"
-      ]
-    },
-    {
-      "ENName": "Chanel",
-      "THName": "ชาเนล",
-      "tags": [
-        "Beauty",
-        "Fashion",
-        "Luxury"
-      ]
-    },
-    {
-      "ENName": "Chiangmai Mariott Hotel",
-      "THName": "เชียงใหม่ แมริออท โฮเทล",
-      "tags": [
-        "Hotel"
-      ]
-    },
-    {
-      "ENName": "Chita House",
-      "Note": "ขายตะหลิวไม้สัก",
-      "THName": "ชิตา เฮาส์",
-      "tags": [
-        "OTOP"
-      ]
-    },
-    {
-      "ENName": "Cockpit",
-      "THName": "คอกพิท",
-      "tags": [
-        "Car"
-      ]
-    },
-    {
-      "ENName": "Cold Stone",
-      "THName": "โคลด์สโตน",
-      "tags": [
-        "Restaurant"
-      ]
-    },
-    {
-      "ENName": "Crocs",
-      "THName": "ครอก",
-      "tags": [
-        "Fashion"
-      ]
-    },
-    {
-      "ENName": "Cute Press",
-      "THName": "คิ้วเพรส",
-      "tags": [
-        "Beauty"
-      ]
-    },
-    {
-      "ENName": "Decathlon",
-      "THName": "ดีแคทลอน",
-      "tags": [
-        "Fashion",
-        "Sport"
-      ]
-    },
-    {
-      "ENName": "Dior",
-      "Note": "เหมือนจะได้แค่บิวตี้มั้ง",
-      "THName": "ดิออร์",
-      "tags": [
-        "Beauty"
-      ]
-    },
-    {
-      "ENName": "Do Home",
-      "THName": "ดูโฮม ",
-      "tags": [
-        "Furniture"
-      ]
-    },
-    {
-      "ENName": "Doi Kham",
-      "THName": "ดอยคำ",
-      "tags": [
-        "Grocery",
-        "OTOP"
-      ]
-    },
-    {
-      "ENName": "Doubletree By Hilton Sukhumvit Bangkok",
-      "THName": "ดับเบิ้ลทรี บาย ฮิลตัน สุขุมวิท กรุงเทพ",
-      "tags": [
-        "Hotel"
-      ]
-    },
-    {
-      "ENName": "Dyson",
-      "THName": "ไดสัน",
-      "tags": [
-        "Electronic"
-      ]
-    },
-    {
-      "ENName": "EVEANDBOY",
-      "THName": "อีฟแอนด์บอย ",
-      "tags": [
-        "Beauty"
-      ]
-    },
-    {
-      "ENName": "Elle",
-      "THName": "เอล",
-      "tags": [
-        "Fashion"
-      ]
-    },
-    {
-      "ENName": "Emporium",
-      "THName": "เอ็มโพเรียม",
-      "tags": [
-        "Retail"
-      ]
-    },
-    {
-      "ENName": "Garmin",
-      "THName": "การ์มิน",
-      "tags": [
-        "Fashion",
-        "Sport"
-      ]
-    },
-    {
-      "ENName": "Global House",
-      "THName": "โกลบอลเฮ้าส์",
-      "tags": [
-        "Furniture"
-      ]
-    },
-    {
-      "ENName": "Hachiban Ramen",
-      "THName": "ฮะจิบังราเมน",
-      "tags": [
-        "Restaurant"
-      ]
-    },
-    {
-      "ENName": "Hermes",
-      "Note": "เหมือนจะได้แค่บิวตี้ แต่ลองซื้อเบอร์กิ้นให้ก็ได้นะ <3",
-      "THName": "แอร์เมส",
-      "tags": [
-        "Beauty",
-        "Luxury"
-      ]
-    },
-    {
-      "ENName": "Holiday Inn Exprerss Bangkok Sathorn",
-      "THName": "ฮอลิเดย์ อินน์ เอ็กซ์เพรส กรุงเทพ สาทร",
-      "tags": [
-        "Hotel"
-      ]
-    },
-    {
-      "ENName": "HomePro",
-      "THName": "โฮมโปร ",
-      "tags": [
-        "Furniture"
-      ]
-    },
-    {
-      "ENName": "Hor Waen",
-      "THName": "หอแว่น",
-      "tags": [
-        "Glasses"
-      ]
-    },
-    {
-      "ENName": "ICONSIAM",
-      "THName": "ไอคอนสยาม",
-      "tags": [
-        "Retail"
-      ]
-    },
-    {
-      "ENName": "IKEA",
-      "Note": "หรือมันควรอ่านว่าไอเกียฟระ",
-      "THName": "อิเกีย",
-      "tags": [
-        "Furniture"
-      ]
-    },
-    {
-      "ENName": "IT City",
-      "THName": "ไอทีซิตี้",
-      "tags": [
-        "Electronic"
-      ]
-    },
-    {
-      "ENName": "Index Living Mall",
-      "THName": "อินเด็กซ์ลิฟวิ่งมอลล์",
-      "tags": [
-        "Furniture"
-      ]
-    },
-    {
-      "ENName": "Intercontinental Chiangmai Maeping Hotel",
-      "THName": "อินเตอร์คอนติเนนตัล เชียงใหม่ แม่ปิง โฮเทล",
-      "tags": [
-        "Hotel"
-      ]
-    },
-    {
-      "ENName": "JIB",
-      "THName": "จิ๊บ",
-      "tags": [
-        "Electronic"
-      ]
-    },
-    {
-      "ENName": "KFC",
-      "THName": "เคเอฟซี",
-      "tags": [
-        "Restaurant"
-      ]
-    },
-    {
-      "ENName": "KT OPTIC",
-      "THName": "เคทีออปติค",
-      "tags": [
-        "Glasses"
-      ]
-    },
-    {
-      "ENName": "Katsuya",
-      "THName": "คัตสึยะ",
-      "tags": [
-        "Restaurant"
-      ]
-    },
-    {
-      "ENName": "Kenzo",
-      "THName": "เคนโซ่",
-      "tags": [
-        "Beauty",
-        "Fashion",
-        "Luxury"
-      ]
-    },
-    {
-      "ENName": "Khun.wann : คุณแว่น",
-      "THName": "คุณแว่น",
-      "tags": [
-        "Glasses"
-      ]
-    },
-    {
-      "ENName": "Kiehls",
-      "THName": "คีลส์",
-      "tags": [
-        "Beauty"
-      ]
-    },
-    {
-      "ENName": "Kinokuniya",
-      "THName": "คิโนะคูนิยะ",
-      "tags": [
-        "Books"
-      ]
-    },
-    {
-      "ENName": "LOEWE",
-      "THName": "โลเอเว่",
-      "tags": [
-        "Beauty",
-        "Fashion",
-        "Luxury"
-      ]
-    },
-    {
-      "ENName": "Le Meridian Bangkok",
-      "THName": "เลอ เมอริเดียน กรุงเทพ",
-      "tags": [
-        "Hotel"
-      ]
-    },
-    {
-      "ENName": "Lotus",
-      "THName": "โลตัส ",
-      "tags": [
-        "Grocery"
-      ]
-    },
-    {
-      "ENName": "Louis Vuitton",
-      "THName": "หลุยส์ วิตตอง",
-      "tags": [
-        "Beauty",
-        "Fashion",
-        "Luxury"
-      ]
-    },
-    {
-      "ENName": "Luscious Creamery",
-      "THName": "ลัสเชียส ครีมเมอรี่",
-      "tags": [
-        "Restaurant"
-      ]
-    },
-    {
-      "ENName": "Makro",
-      "THName": "แม็คโคร ",
-      "tags": [
-        "Grocery"
-      ]
-    },
-    {
-      "ENName": "McDonald",
-      "THName": "แมคโดนัลด์",
-      "tags": [
-        "Restaurant"
-      ]
-    },
-    {
-      "ENName": "Meb",
-      "THName": "เม๊บ",
-      "tags": [
-        "Books"
-      ]
-    },
-    {
-      "ENName": "Miu Miu",
-      "THName": "กาเบกาเบ",
-      "tags": [
-        "Beauty",
-        "Fashion",
-        "Luxury"
-      ]
-    },
-    {
-      "ENName": "Modernform",
-      "THName": "โมเดอร์นฟอร์ม",
-      "tags": [
-        "Furniture"
-      ]
-    },
-    {
-      "ENName": "Mulberry",
-      "THName": "มัลเบอร์รี่",
-      "tags": [
-        "Beauty",
-        "Fashion",
-        "Luxury"
-      ]
-    },
-    {
-      "ENName": "Multy Beauty",
-      "THName": "มัลตี้บิวตี้",
-      "tags": [
-        "Beauty"
-      ]
-    },
-    {
-      "ENName": "Munkong Gadget",
-      "THName": "มั่นคงแก๊ดเจ็ต",
-      "tags": [
-        "Electronic"
-      ]
-    },
-    {
-      "ENName": "Naiin",
-      "THName": "นายอินทร์",
-      "tags": [
-        "Beauty",
-        "Fashion",
-        "Luxury"
-      ]
-    },
-    {
-      "ENName": "Ootoya",
-      "THName": "โอโตยะ",
-      "tags": [
-        "Restaurant"
-      ]
-    },
-    {
-      "ENName": "Owndays",
-      "Note": "ถอดภาษาไทยให้ไม่ถูกละแม่",
-      "THName": "โอนเดย์ส์",
-      "tags": [
-        "Glasses"
-      ]
-    },
-    {
-      "ENName": "Paragon",
-      "THName": "พารากอน",
-      "tags": [
-        "Retail"
-      ]
-    },
-    {
-      "ENName": "Paris Miki Thailand",
-      "THName": "ปารีส มิกิ ไทยแลนด์",
-      "tags": [
-        "Glasses"
-      ]
-    },
-    {
-      "ENName": "Paul Smith",
-      "THName": "พอล สมิธ",
-      "tags": [
-        "Beauty",
-        "Fashion",
-        "Luxury"
-      ]
-    },
-    {
-      "ENName": "Peppeer Lunch",
-      "THName": "เปปเปอร์ลันช์",
-      "tags": [
-        "Restaurant"
-      ]
-    },
-    {
-      "ENName": "Polo Ralph Lauren",
-      "THName": "โปโล ราล์ฟ ลอเรน",
-      "tags": [
-        "Fashion",
-        "Luxury"
-      ]
-    },
-    {
-      "ENName": "PowerBuy",
-      "THName": "พาวเวอร์บาย",
-      "tags": [
-        "Electronic"
-      ]
-    },
-    {
-      "ENName": "Prada",
-      "THName": "พราด้า",
-      "tags": [
-        "Beauty",
-        "Fashion",
-        "Luxury"
-      ]
-    },
-    {
-      "ENName": "Robinson",
-      "THName": "โรบินสัน",
-      "tags": [
-        "Grocery"
-      ]
-    },
-    {
-      "ENName": "SB Design Square",
-      "THName": "เอสบี ดีไซน์ สแควร์",
-      "tags": [
-        "Furniture"
-      ]
-    },
-    {
-      "ENName": "Salad Factory",
-      "THName": "สลัดแฟคตอรี่",
-      "tags": [
-        "Restaurant"
-      ]
-    },
-    {
-      "ENName": "Salana",
-      "THName": "ศาลานา",
-      "tags": [
-        "Grocery",
-        "OTOP"
-      ]
-    },
-    {
-      "ENName": "Se-ed",
-      "THName": "ซีเอ็ด",
-      "tags": [
-        "Books"
-      ]
-    },
-    {
-      "ENName": "Shabuton",
-      "THName": "ชาบูตง",
-      "tags": [
-        "Restaurant"
-      ]
-    },
-    {
-      "ENName": "Siam Takashimaya",
-      "THName": "สยาม ทากาชิมาย่า",
-      "tags": [
-        "Grocery"
-      ]
-    },
-    {
-      "ENName": "Sizzler",
-      "THName": "ซิสซ์เลอร์",
-      "tags": [
-        "Restaurant"
-      ]
-    },
-    {
-      "ENName": "Somtum Nua",
-      "THName": "ส้มตำนัว",
-      "tags": [
-        "Restaurant"
-      ]
-    },
-    {
-      "ENName": "Starbucks",
-      "THName": "สตาร์บัคส์",
-      "tags": [
-        "Restaurant"
-      ]
-    },
-    {
-      "ENName": "Studio 7",
-      "THName": "สตูดิโอ 7",
-      "tags": [
-        "Electronic"
-      ]
-    },
-    {
-      "ENName": "Supersport",
-      "THName": "ซูเปอร์สปอร์ต",
-      "tags": [
-        "Sport"
-      ]
-    },
-    {
-      "ENName": "Swensens",
-      "THName": "สเวนเซ่น",
-      "tags": [
-        "Restaurant"
-      ]
-    },
-    {
-      "ENName": "Tenya",
-      "THName": "เทนยะ",
-      "tags": [
-        "Restaurant"
-      ]
-    },
-    {
-      "ENName": "Thanyamanee Gems",
-      "THName": "ธัญญมณี",
-      "tags": [
-        "Jewelry",
-        "OTOP"
-      ]
-    },
-    {
-      "ENName": "The Antheenee Hotel Bangkok",
-      "THName": "ดิ แอทธินี โฮเทล แบงค็อก",
-      "tags": [
-        "Hotel"
-      ]
-    },
-    {
-      "ENName": "The Mall",
-      "THName": "เดอะมอลล์",
-      "tags": [
-        "Grocery"
-      ]
-    },
-    {
-      "ENName": "Tom Ford",
-      "THName": "ทอมฟอร์ด",
-      "tags": [
-        "Beauty",
-        "Fashion",
-        "Luxury"
-      ]
-    },
-    {
-      "ENName": "Tops",
-      "THName": "ท็อปส์",
-      "tags": [
-        "Grocery"
-      ]
-    },
-    {
-      "ENName": "Uniqlo",
-      "THName": "ยูนิโคล",
-      "tags": [
-        "Fashion"
-      ]
-    },
-    {
-      "ENName": "Untitled Run",
-      "THName": "อันไตเติ้ลรัน",
-      "Note": "หรือควรอ่านว่ายูไนเต็ด?",
-      "tags": [
-        "Sport"
-      ]
-    },
-    {
-      "ENName": "Verasu",
-      "THName": "วีรสุ",
-      "tags": [
-        "Electronic"
-      ]
-    },
-    {
-      "ENName": "Vivien Westwood",
-      "THName": "วิเวียน เวสตวูด",
-      "tags": [
-        "Beauty",
-        "Fashion",
-        "Luxury"
-      ]
-    },
-    {
-      "ENName": "Wacoal",
-      "THName": "วาโก้",
-      "tags": [
-        "Fashion"
-      ]
-    },
-    {
-      "ENName": "Warrix",
-      "THName": "วาร์ริกซ์",
-      "tags": [
-        "Fashion",
-        "Sport"
-      ]
-    },
-    {
-      "ENName": "Washington1985",
-      "THName": "วอชิงตัน 1985",
-      "tags": [
-        "Glasses"
-      ]
-    },
-    {
-      "ENName": "Watsons",
-      "THName": "วัตสันส์",
-      "tags": [
-        "Beauty"
-      ]
-    }
-  ]
+  {
+    "ENName": "AKA",
+    "THName": "อากะ",
+    "tags": [
+      "Restaurant"
+    ]
+  },
+  {
+    "ENName": "Advice",
+    "THName": "แอดไวซ์",
+    "tags": [
+      "Electronic"
+    ]
+  },
+  {
+    "ENName": "Allwell",
+    "THName": "ออลเวลล์",
+    "tags": [
+      "Medical"
+    ]
+  },
+  {
+    "ENName": "Auntie Anne's",
+    "THName": "อานตี้ แอนส์",
+    "tags": [
+      "Restaurant"
+    ]
+  },
+  {
+    "ENName": "Auto1",
+    "THName": "ออโต้วัน",
+    "tags": [
+      "Car"
+    ]
+  },
+  {
+    "ENName": "Autobot",
+    "THName": "ออโต้บอต",
+    "tags": [
+      "Electronic"
+    ]
+  },
+  {
+    "ENName": "Avarin",
+    "THName": "อวาริน",
+    "tags": [
+      "Sport"
+    ]
+  },
+  {
+    "ENName": "B-Quik",
+    "THName": "บีควิก",
+    "tags": [
+      "Car"
+    ]
+  },
+  {
+    "ENName": "B2S",
+    "THName": "บีทูเอส",
+    "tags": [
+      "Books"
+    ]
+  },
+  {
+    "ENName": "BEAUTRIUM",
+    "THName": "บิวเทรี่ยม",
+    "tags": [
+      "Beauty"
+    ]
+  },
+  {
+    "ENName": "Banana",
+    "THName": "บานาน่า",
+    "tags": [
+      "Electronic"
+    ]
+  },
+  {
+    "ENName": "Banana Run",
+    "THName": "บานาน่ารัน",
+    "tags": [
+      "Sport"
+    ]
+  },
+  {
+    "ENName": "Bangkok Mariott Maquis Queenspark",
+    "Note": "หิวโกจิค่ะแม่ขา",
+    "THName": "แบงค็อก แมริออท มาร์คีส์ ควีนส์ปาร์ค",
+    "tags": [
+      "Hotel"
+    ]
+  },
+  {
+    "ENName": "Bar B Q Plaza",
+    "THName": "บาบีก้อน",
+    "tags": [
+      "Restaurant"
+    ]
+  },
+  {
+    "ENName": "BeNeat",
+    "THName": "บีนีท",
+    "tags": [
+      "Cleaner"
+    ]
+  },
+  {
+    "ENName": "BeTrend",
+    "THName": "บีเทรนด์",
+    "tags": [
+      "Books"
+    ]
+  },
+  {
+    "ENName": "Big C",
+    "THName": "บิ๊กซี ",
+    "tags": [
+      "Grocery"
+    ]
+  },
+  {
+    "ENName": "Big Camera",
+    "THName": "บิ๊กคาเมร่า",
+    "tags": [
+      "Electronic"
+    ]
+  },
+  {
+    "ENName": "Boots",
+    "THName": "บูทส์",
+    "tags": [
+      "Beauty"
+    ]
+  },
+  {
+    "ENName": "Boyy",
+    "THName": "บอย",
+    "tags": [
+      "Fashion",
+      "Luxury"
+    ]
+  },
+  {
+    "ENName": "CJ",
+    "THName": "ซีเจ",
+    "tags": [
+      "Grocery"
+    ]
+  },
+  {
+    "ENName": "CPS Chaps",
+    "THName": "ซีพีเอส แชปส์",
+    "tags": [
+      "Fashion"
+    ]
+  },
+  {
+    "ENName": "Casio",
+    "THName": "คาซิโอ",
+    "tags": [
+      "Fashion"
+    ]
+  },
+  {
+    "ENName": "Casio",
+    "THName": "คาซิโอ",
+    "tags": [
+      "Fashion"
+    ]
+  },
+  {
+    "ENName": "Celine",
+    "THName": "ซีลีน",
+    "tags": [
+      "Beauty",
+      "Fashion",
+      "Luxury"
+    ]
+  },
+  {
+    "ENName": "Central",
+    "THName": "เซ็นทรัล",
+    "tags": [
+      "Retail"
+    ]
+  },
+  {
+    "ENName": "Cernic International",
+    "Note": "อุปกรณ์เซรามิค",
+    "THName": "เซอร์นิค",
+    "tags": [
+      "Furniture"
+    ]
+  },
+  {
+    "ENName": "Chanel",
+    "THName": "ชาเนล",
+    "tags": [
+      "Beauty",
+      "Fashion",
+      "Luxury"
+    ]
+  },
+  {
+    "ENName": "Chiangmai Mariott Hotel",
+    "THName": "เชียงใหม่ แมริออท โฮเทล",
+    "tags": [
+      "Hotel"
+    ]
+  },
+  {
+    "ENName": "Chita House",
+    "Note": "ขายตะหลิวไม้สัก",
+    "THName": "ชิตา เฮาส์",
+    "tags": [
+      "OTOP"
+    ]
+  },
+  {
+    "ENName": "Claire Candle ",
+    "Note": "ขายเทียนไฟฟ้า",
+    "THName": "แคลร์ แคนเดิล",
+    "tags": [
+      "Furniture"
+    ]
+  },
+  {
+    "ENName": "Clarins Skin Spa",
+    "THName": "คลาแรงส์ สกิน สปา",
+    "tags": [
+      "Spa"
+    ]
+  },
+  {
+    "ENName": "Clawset.bkk",
+    "THName": "คลอเซ็ท",
+    "tags": [
+      "Pet"
+    ]
+  },
+  {
+    "ENName": "Cockpit",
+    "THName": "คอกพิท",
+    "tags": [
+      "Car"
+    ]
+  },
+  {
+    "ENName": "Cold Stone",
+    "THName": "โคลด์สโตน",
+    "tags": [
+      "Restaurant"
+    ]
+  },
+  {
+    "ENName": "Crocs",
+    "THName": "ครอก",
+    "tags": [
+      "Fashion"
+    ]
+  },
+  {
+    "ENName": "Cute Press",
+    "THName": "คิ้วเพรส",
+    "tags": [
+      "Beauty"
+    ]
+  },
+  {
+    "ENName": "Decathlon",
+    "THName": "ดีแคทลอน",
+    "tags": [
+      "Fashion",
+      "Sport"
+    ]
+  },
+  {
+    "ENName": "Dior",
+    "Note": "เหมือนจะได้แค่บิวตี้มั้ง",
+    "THName": "ดิออร์",
+    "tags": [
+      "Beauty"
+    ]
+  },
+  {
+    "ENName": "Do Home",
+    "THName": "ดูโฮม ",
+    "tags": [
+      "Furniture"
+    ]
+  },
+  {
+    "ENName": "Doi Kham",
+    "THName": "ดอยคำ",
+    "tags": [
+      "Grocery",
+      "OTOP"
+    ]
+  },
+  {
+    "ENName": "Doubletree By Hilton Sukhumvit Bangkok",
+    "THName": "ดับเบิ้ลทรี บาย ฮิลตัน สุขุมวิท กรุงเทพ",
+    "tags": [
+      "Hotel"
+    ]
+  },
+  {
+    "ENName": "Dyson",
+    "THName": "ไดสัน",
+    "tags": [
+      "Electronic"
+    ]
+  },
+  {
+    "ENName": "EVEANDBOY",
+    "THName": "อีฟแอนด์บอย ",
+    "tags": [
+      "Beauty"
+    ]
+  },
+  {
+    "ENName": "Elle",
+    "THName": "เอล",
+    "tags": [
+      "Fashion"
+    ]
+  },
+  {
+    "ENName": "Emporium",
+    "THName": "เอ็มโพเรียม",
+    "tags": [
+      "Retail"
+    ]
+  },
+  {
+    "ENName": "Ergotrend",
+    "THName": "เออร์โกเทรนด์",
+    "tags": [
+      "Furniture"
+    ]
+  },
+  {
+    "ENName": "FILA",
+    "THName": "ฟีล่า",
+    "tags": [
+      "Fashion",
+      "Sport"
+    ]
+  },
+  {
+    "ENName": "Fitflop",
+    "THName": "ฟิตฟลอป",
+    "tags": [
+      "Fashion"
+    ]
+  },
+  {
+    "ENName": "G2000",
+    "THName": "จีสองพัน",
+    "tags": [
+      "Fashion"
+    ]
+  },
+  {
+    "ENName": "Garmin",
+    "THName": "การ์มิน",
+    "tags": [
+      "Fashion",
+      "Sport"
+    ]
+  },
+  {
+    "ENName": "Global House",
+    "THName": "โกลบอลเฮ้าส์",
+    "tags": [
+      "Furniture"
+    ]
+  },
+  {
+    "ENName": "Guess",
+    "THName": "เกส",
+    "tags": [
+      "Fashion"
+    ]
+  },
+  {
+    "ENName": "Hachiban Ramen",
+    "THName": "ฮะจิบังราเมน",
+    "tags": [
+      "Restaurant"
+    ]
+  },
+  {
+    "ENName": "Hermes",
+    "Note": "เหมือนจะได้แค่บิวตี้ แต่ลองซื้อเบอร์กิ้นให้ก็ได้นะ <3",
+    "THName": "แอร์เมส",
+    "tags": [
+      "Beauty",
+      "Luxury"
+    ]
+  },
+  {
+    "ENName": "Holiday Inn Exprerss Bangkok Sathorn",
+    "THName": "ฮอลิเดย์ อินน์ เอ็กซ์เพรส กรุงเทพ สาทร",
+    "tags": [
+      "Hotel"
+    ]
+  },
+  {
+    "ENName": "HomePro",
+    "THName": "โฮมโปร ",
+    "tags": [
+      "Furniture"
+    ]
+  },
+  {
+    "ENName": "Hor Waen",
+    "THName": "หอแว่น",
+    "tags": [
+      "Glasses"
+    ]
+  },
+  {
+    "ENName": "Hush Puppies",
+    "THName": "ฮัช พัพพี่ส์",
+    "tags": [
+      "Fashion"
+    ]
+  },
+  {
+    "ENName": "ICONSIAM",
+    "THName": "ไอคอนสยาม",
+    "tags": [
+      "Retail"
+    ]
+  },
+  {
+    "ENName": "IKEA",
+    "Note": "หรือมันควรอ่านว่าไอเกียฟระ",
+    "THName": "อิเกีย",
+    "tags": [
+      "Furniture"
+    ]
+  },
+  {
+    "ENName": "IT City",
+    "THName": "ไอทีซิตี้",
+    "tags": [
+      "Electronic"
+    ]
+  },
+  {
+    "ENName": "Index Living Mall",
+    "THName": "อินเด็กซ์ลิฟวิ่งมอลล์",
+    "tags": [
+      "Furniture"
+    ]
+  },
+  {
+    "ENName": "Intercontinental Chiangmai Maeping Hotel",
+    "THName": "อินเตอร์คอนติเนนตัล เชียงใหม่ แม่ปิง โฮเทล",
+    "tags": [
+      "Hotel"
+    ]
+  },
+  {
+    "ENName": "JIB",
+    "THName": "จิ๊บ",
+    "tags": [
+      "Electronic"
+    ]
+  },
+  {
+    "ENName": "Jaspal",
+    "THName": "แจสปาล",
+    "tags": [
+      "Fashion"
+    ]
+  },
+  {
+    "ENName": "Jubilee Diamond",
+    "THName": "จูบิลี่ ไดมอนด์",
+    "tags": [
+      "Jewelry"
+    ]
+  },
+  {
+    "ENName": "KFC",
+    "THName": "เคเอฟซี",
+    "tags": [
+      "Restaurant"
+    ]
+  },
+  {
+    "ENName": "KIKO",
+    "THName": "กิโกะ",
+    "tags": [
+      "Beauty"
+    ]
+  },
+  {
+    "ENName": "KT OPTIC",
+    "THName": "เคทีออปติค",
+    "tags": [
+      "Glasses"
+    ]
+  },
+  {
+    "ENName": "Katsuya",
+    "THName": "คัตสึยะ",
+    "tags": [
+      "Restaurant"
+    ]
+  },
+  {
+    "ENName": "Kenzo",
+    "THName": "เคนโซ่",
+    "tags": [
+      "Beauty",
+      "Fashion",
+      "Luxury"
+    ]
+  },
+  {
+    "ENName": "Khun.wann : คุณแว่น",
+    "THName": "คุณแว่น",
+    "tags": [
+      "Glasses"
+    ]
+  },
+  {
+    "ENName": "Kiani",
+    "THName": "คีอานี",
+    "tags": [
+      "Restaurant"
+    ]
+  },
+  {
+    "ENName": "Kiehls",
+    "THName": "คีลส์",
+    "tags": [
+      "Beauty"
+    ]
+  },
+  {
+    "ENName": "Kingmarind",
+    "THName": "Kingmarind - มะขามหวานเพชรบูรณ์",
+    "tags": [
+      "OTOP"
+    ]
+  },
+  {
+    "ENName": "Kinokuniya",
+    "THName": "คิโนะคูนิยะ",
+    "tags": [
+      "Books"
+    ]
+  },
+  {
+    "ENName": "LOEWE",
+    "THName": "โลเอเว่",
+    "tags": [
+      "Beauty",
+      "Fashion",
+      "Luxury"
+    ]
+  },
+  {
+    "ENName": "Le Meridian Bangkok",
+    "THName": "เลอ เมอริเดียน กรุงเทพ",
+    "tags": [
+      "Hotel"
+    ]
+  },
+  {
+    "ENName": "Lotus",
+    "THName": "โลตัส ",
+    "tags": [
+      "Grocery"
+    ]
+  },
+  {
+    "ENName": "Louis Vuitton",
+    "THName": "หลุยส์ วิตตอง",
+    "tags": [
+      "Beauty",
+      "Fashion",
+      "Luxury"
+    ]
+  },
+  {
+    "ENName": "Luscious Creamery",
+    "THName": "ลัสเชียส ครีมเมอรี่",
+    "tags": [
+      "Restaurant"
+    ]
+  },
+  {
+    "ENName": "Makro",
+    "THName": "แม็คโคร ",
+    "tags": [
+      "Grocery"
+    ]
+  },
+  {
+    "ENName": "McDonald",
+    "THName": "แมคโดนัลด์",
+    "tags": [
+      "Restaurant"
+    ]
+  },
+  {
+    "ENName": "Meb",
+    "THName": "เม๊บ",
+    "tags": [
+      "Books"
+    ]
+  },
+  {
+    "ENName": "Miu Miu",
+    "THName": "กาเบกาเบ",
+    "tags": [
+      "Beauty",
+      "Fashion",
+      "Luxury"
+    ]
+  },
+  {
+    "ENName": "Modernform",
+    "THName": "โมเดอร์นฟอร์ม",
+    "tags": [
+      "Furniture"
+    ]
+  },
+  {
+    "ENName": "Muji",
+    "THName": "มูจิ",
+    "tags": [
+      "Fashion",
+      "Furniture"
+    ]
+  },
+  {
+    "ENName": "Mulberry",
+    "THName": "มัลเบอร์รี่",
+    "tags": [
+      "Beauty",
+      "Fashion",
+      "Luxury"
+    ]
+  },
+  {
+    "ENName": "Multy Beauty",
+    "THName": "มัลตี้บิวตี้",
+    "tags": [
+      "Beauty"
+    ]
+  },
+  {
+    "ENName": "Munkong Gadget",
+    "THName": "มั่นคงแก๊ดเจ็ต",
+    "tags": [
+      "Electronic"
+    ]
+  },
+  {
+    "ENName": "Naiin",
+    "THName": "นายอินทร์",
+    "tags": [
+      "Beauty",
+      "Fashion",
+      "Luxury"
+    ]
+  },
+  {
+    "ENName": "Ootoya",
+    "THName": "โอโตยะ",
+    "tags": [
+      "Restaurant"
+    ]
+  },
+  {
+    "ENName": "Owndays",
+    "Note": "ถอดภาษาไทยให้ไม่ถูกละแม่",
+    "THName": "โอนเดย์ส์",
+    "tags": [
+      "Glasses"
+    ]
+  },
+  {
+    "ENName": "Pandora",
+    "THName": "แพนดอร่า",
+    "tags": [
+      "Jewelry"
+    ]
+  },
+  {
+    "ENName": "Panpuri",
+    "THName": "ปานปุรี",
+    "tags": [
+      "Spa"
+    ]
+  },
+  {
+    "ENName": "Paragon",
+    "THName": "พารากอน",
+    "tags": [
+      "Retail"
+    ]
+  },
+  {
+    "ENName": "Paris Miki Thailand",
+    "THName": "ปารีส มิกิ ไทยแลนด์",
+    "tags": [
+      "Glasses"
+    ]
+  },
+  {
+    "ENName": "Paul Smith",
+    "THName": "พอล สมิธ",
+    "tags": [
+      "Beauty",
+      "Fashion",
+      "Luxury"
+    ]
+  },
+  {
+    "ENName": "Peppeer Lunch",
+    "THName": "เปปเปอร์ลันช์",
+    "tags": [
+      "Restaurant"
+    ]
+  },
+  {
+    "ENName": "Polo Ralph Lauren",
+    "THName": "โปโล ราล์ฟ ลอเรน",
+    "tags": [
+      "Fashion",
+      "Luxury"
+    ]
+  },
+  {
+    "ENName": "PowerBuy",
+    "THName": "พาวเวอร์บาย",
+    "tags": [
+      "Electronic"
+    ]
+  },
+  {
+    "ENName": "Prada",
+    "THName": "พราด้า",
+    "tags": [
+      "Beauty",
+      "Fashion",
+      "Luxury"
+    ]
+  },
+  {
+    "ENName": "RESTER",
+    "Note": "เก้าอี้นวด",
+    "THName": "เรสเตอร์",
+    "tags": [
+      "Furniture"
+    ]
+  },
+  {
+    "ENName": "Ravipa",
+    "THName": "รวิภา",
+    "tags": [
+      "Jewelry"
+    ]
+  },
+  {
+    "ENName": "Robinson",
+    "THName": "โรบินสัน",
+    "tags": [
+      "Grocery"
+    ]
+  },
+  {
+    "ENName": "SB Design Square",
+    "THName": "เอสบี ดีไซน์ สแควร์",
+    "tags": [
+      "Furniture"
+    ]
+  },
+  {
+    "ENName": "Saemaeul",
+    "THName": "แซมาอึล",
+    "tags": [
+      "Restaurant"
+    ]
+  },
+  {
+    "ENName": "Salad Factory",
+    "THName": "สลัดแฟคตอรี่",
+    "tags": [
+      "Restaurant"
+    ]
+  },
+  {
+    "ENName": "Salana",
+    "THName": "ศาลานา",
+    "tags": [
+      "Grocery",
+      "OTOP"
+    ]
+  },
+  {
+    "ENName": "Samsonite",
+    "THName": "แซมโซไนต์",
+    "tags": [
+      "Fashion"
+    ]
+  },
+  {
+    "ENName": "Se-ed",
+    "THName": "ซีเอ็ด",
+    "tags": [
+      "Books"
+    ]
+  },
+  {
+    "ENName": "Shabushi",
+    "THName": "ชาบูชิ",
+    "tags": [
+      "Restaurant"
+    ]
+  },
+  {
+    "ENName": "Shabuton",
+    "THName": "ชาบูตง",
+    "tags": [
+      "Restaurant"
+    ]
+  },
+  {
+    "ENName": "Siam Board Games",
+    "THName": "สยามบอร์ดเกม",
+    "tags": [
+      "Entertainment"
+    ]
+  },
+  {
+    "ENName": "Siam Takashimaya",
+    "THName": "สยาม ทากาชิมาย่า",
+    "tags": [
+      "Grocery"
+    ]
+  },
+  {
+    "ENName": "Sigma Sofa",
+    "THName": "ซิกม่า โซฟา",
+    "tags": [
+      "Furniture"
+    ]
+  },
+  {
+    "ENName": "Simple Haus",
+    "THName": "ซิมเปิล เฮาส์",
+    "tags": [
+      "Furniture"
+    ]
+  },
+  {
+    "ENName": "Sizzler",
+    "THName": "ซิสซ์เลอร์",
+    "tags": [
+      "Restaurant"
+    ]
+  },
+  {
+    "ENName": "Skechers",
+    "THName": "สเกตเชอร์",
+    "tags": [
+      "Fashion"
+    ]
+  },
+  {
+    "ENName": "Smeg",
+    "THName": "สเม็ก",
+    "tags": [
+      "Electronic",
+      "Furniture"
+    ]
+  },
+  {
+    "ENName": "Somtum Nua",
+    "THName": "ส้มตำนัว",
+    "tags": [
+      "Restaurant"
+    ]
+  },
+  {
+    "ENName": "Spa Krisana",
+    "THName": "สปากฤษณา",
+    "tags": [
+      "Spa"
+    ]
+  },
+  {
+    "ENName": "Starbucks",
+    "THName": "สตาร์บัคส์",
+    "tags": [
+      "Restaurant"
+    ]
+  },
+  {
+    "ENName": "Studio 7",
+    "THName": "สตูดิโอ 7",
+    "tags": [
+      "Electronic"
+    ]
+  },
+  {
+    "ENName": "Supersport",
+    "THName": "ซูเปอร์สปอร์ต",
+    "tags": [
+      "Sport"
+    ]
+  },
+  {
+    "ENName": "Swensens",
+    "THName": "สเวนเซ่น",
+    "tags": [
+      "Restaurant"
+    ]
+  },
+  {
+    "ENName": "Tenya",
+    "THName": "เทนยะ",
+    "tags": [
+      "Restaurant"
+    ]
+  },
+  {
+    "ENName": "Thanyamanee Gems",
+    "THName": "ธัญญมณี",
+    "tags": [
+      "Jewelry",
+      "OTOP"
+    ]
+  },
+  {
+    "ENName": "The Antheenee Hotel Bangkok",
+    "THName": "ดิ แอทธินี โฮเทล แบงค็อก",
+    "tags": [
+      "Hotel"
+    ]
+  },
+  {
+    "ENName": "The Body Shop",
+    "THName": "เดอะ บอดี้ ชอป",
+    "tags": [
+      "Beauty"
+    ]
+  },
+  {
+    "ENName": "The Mall",
+    "THName": "เดอะมอลล์",
+    "tags": [
+      "Grocery"
+    ]
+  },
+  {
+    "ENName": "The Puffin House",
+    "THName": "เดอะพัฟฟินเฮาส์",
+    "tags": [
+      "Sport"
+    ]
+  },
+  {
+    "ENName": "Tinzshop",
+    "Note": "Nintendo Switch และเกมของเค้า",
+    "THName": "ตินซ์ชอป",
+    "tags": [
+      "Entertainment"
+    ]
+  },
+  {
+    "ENName": "Tom Ford",
+    "THName": "ทอมฟอร์ด",
+    "tags": [
+      "Beauty",
+      "Fashion",
+      "Luxury"
+    ]
+  },
+  {
+    "ENName": "Top Charoen",
+    "THName": "แว่นทอปเจริญ",
+    "tags": [
+      "Glasses"
+    ]
+  },
+  {
+    "ENName": "Tops",
+    "THName": "ท็อปส์",
+    "tags": [
+      "Grocery"
+    ]
+  },
+  {
+    "ENName": "Uniqlo",
+    "THName": "ยูนิโคล",
+    "tags": [
+      "Fashion"
+    ]
+  },
+  {
+    "ENName": "Untitled Run",
+    "THName": "อันไตเติ้ลรัน",
+    "Note": "หรือควรอ่านว่ายูไนเต็ด?",
+    "tags": [
+      "Sport"
+    ]
+  },
+  {
+    "ENName": "Verasu",
+    "THName": "วีรสุ",
+    "tags": [
+      "Electronic"
+    ]
+  },
+  {
+    "ENName": "Villa Market",
+    "THName": "วิลล่า มาร์เกต",
+    "tags": [
+      "Grocery"
+    ]
+  },
+  {
+    "ENName": "Vitamin Club",
+    "THName": "วิตามิน คลับ",
+    "tags": [
+      "Medical"
+    ]
+  },
+  {
+    "ENName": "Vivien Westwood",
+    "THName": "วิเวียน เวสตวูด",
+    "tags": [
+      "Beauty",
+      "Fashion",
+      "Luxury"
+    ]
+  },
+  {
+    "ENName": "Wacoal",
+    "THName": "วาโก้",
+    "tags": [
+      "Fashion"
+    ]
+  },
+  {
+    "ENName": "Warrix",
+    "THName": "วาร์ริกซ์",
+    "tags": [
+      "Fashion",
+      "Sport"
+    ]
+  },
+  {
+    "ENName": "Washington1985",
+    "THName": "วอชิงตัน 1985",
+    "tags": [
+      "Glasses"
+    ]
+  },
+  {
+    "ENName": "Watsons",
+    "THName": "วัตสันส์",
+    "tags": [
+      "Beauty",
+      "Medical"
+    ]
+  },
+  {
+    "ENName": "Wimol Tapae",
+    "THName": "วิมล ท่าแพ",
+    "tags": [
+      "Hotel"
+    ]
+  },
+  {
+    "ENName": "Wisdom International Buffet",
+    "THName": "วิสด้อม",
+    "tags": [
+      "Restaurant"
+    ]
+  }
+]
