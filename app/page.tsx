@@ -6,11 +6,10 @@ import { ReactNode, useState } from "react";
 
 // const userSearch = '';
 
-
 export default function Home() {
   const [inputValue, setInputValue] = useState("");
   let tableItem: ReactNode[] = [];
-  handleSearch(); 
+  handleSearch();
 
   return (
     <div className="">
@@ -21,9 +20,9 @@ export default function Home() {
               <div className="flex shrink-0 items-center"></div>
               <div className="hidden sm:ml-6 sm:block">
                 <div className="flex space-x-4">
-                 
-                    <span id="bannerText" style={{color: "white"}}>ETAX Searcher</span>
-                 
+                  <span id="bannerText" style={{ color: "white" }}>
+                    ETAX Searcher
+                  </span>
                 </div>
               </div>
             </div>
@@ -57,10 +56,9 @@ export default function Home() {
             </button>
           </div> */}
         </div>
-
         <br />
         ไหมเห็ด กรุณายืนยันกับพนักงานหน้าร้านอีกครั้งก่อนซื้อ
-        <div  style={{ overflow: "scroll" }}>
+        <div style={{ overflow: "scroll" }}>
           <table className="table-auto" style={{ width: "100%" }}>
             <thead className="bg-teal-100">
               <tr>
@@ -107,29 +105,26 @@ export default function Home() {
         tags.includes(inputValue)
       ) {
         // const tags: object[] = [];
-        element.tags.forEach( (tag: string) => {
+        element.tags.forEach((tag: string) => {
           const key = ENName + tag;
+          let color = "";
           if (tag == "OTOP") {
-            tagCMP.push(
-              <button
-                key={key}
-                onClick={() => handlePillSearch( {tag})}
-                className="py-2 px-4 shadow-md bg-green-300 no-underline rounded-full text-black border-blue btn-primary hover:bg-blue-light focus:outline-none active:shadow-none mr-2"
-              >
-                {tag}
-              </button>
-            );
+            color =
+              "bg-green-200 py-2 px-4 shadow-md no-underline rounded-full text-black border-blue btn-primary hover:bg-blue-light focus:outline-none active:shadow-none mr-2";
           } else {
-            tagCMP.push(
-              <button
-                key={key}
-                onClick={() => handlePillSearch( {tag})}
-                className="py-2 px-4 shadow-md bg-pink-200 no-underline rounded-full text-black border-blue btn-primary hover:bg-blue-light focus:outline-none active:shadow-none mr-2"
-              >
-                {tag}
-              </button>
-            );
+            color =
+              "bg-pink-200 py-2 px-4 shadow-md no-underline rounded-full text-black border-blue btn-primary hover:bg-blue-light focus:outline-none active:shadow-none mr-2";
           }
+
+          tagCMP.push(
+            <button
+              key={key}
+              onClick={() => handlePillSearch({ tag })}
+              className={color}
+            >
+              {tag}
+            </button>
+          );
         });
 
         const trkey = "item" + index;
@@ -164,14 +159,12 @@ export default function Home() {
     tableItem = result;
   }
 
-
-  function handlePillSearch( tag: {tag: string} ) {
-    
+  function handlePillSearch(tag: { tag: string }) {
     setInputValue(tag.tag);
 
-    console.log('handlePillSearch');
+    console.log("handlePillSearch");
     const pillValue = tag.tag;
-    console.log('pillValue1: '+JSON.stringify(pillValue));
+    console.log("pillValue1: " + JSON.stringify(pillValue));
     // console.log('pillValue2: '+e.target.innerHTML);
     let index = 1;
 
@@ -179,36 +172,31 @@ export default function Home() {
 
     ETAXJSON.forEach((element) => {
       const tags = element.tags;
-          
 
       tags.forEach((tag) => {
         const tagCMP: ReactNode[] = [];
-        if(tag == pillValue){
-          tags.forEach( (tag: string) => {
+        if (tag == pillValue) {
+          tags.forEach((tag: string) => {
             const key = element.ENName + tag;
+            let color = "";
             if (tag == "OTOP") {
-              tagCMP.push(
-                <button
-                  key={key}
-                  onClick={() => handlePillSearch( {tag})}
-                  className="py-2 px-4 shadow-md bg-green-300 no-underline rounded-full text-black border-blue btn-primary hover:bg-blue-light focus:outline-none active:shadow-none mr-2"
-                >
-                  {tag}
-                </button>
-              );
+              color =
+                "bg-green-200 py-2 px-4 shadow-md no-underline rounded-full text-black border-blue btn-primary hover:bg-blue-light focus:outline-none active:shadow-none mr-2";
             } else {
-              tagCMP.push(
-                <button
-                  key={key}
-                  onClick={() => handlePillSearch( {tag})}
-                  className="py-2 px-4 shadow-md bg-pink-200 no-underline rounded-full text-black border-blue btn-primary hover:bg-blue-light focus:outline-none active:shadow-none mr-2"
-                >
-                  {tag}
-                </button>
-              );
+              color =
+                "bg-pink-200 py-2 px-4 shadow-md no-underline rounded-full text-black border-blue btn-primary hover:bg-blue-light focus:outline-none active:shadow-none mr-2";
             }
-          });
 
+            tagCMP.push(
+              <button
+                key={key}
+                onClick={() => handlePillSearch({ tag })}
+                className={color}
+              >
+                {tag}
+              </button>
+            );
+          });
 
           const trkey = "item" + index;
           const tdkey1 = "itemtd1" + index;
@@ -236,15 +224,13 @@ export default function Home() {
                 {element.Note}
               </td>
             </tr>
-
           );
         }
-      })
-    })
+      });
+    });
     tableItem = result;
-    
+
     // document.getElementById('tbody')?.tableItem);
-    console.log('end');
-      
+    console.log("end");
   }
 }
