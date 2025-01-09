@@ -59,6 +59,7 @@ export default function Home() {
         </div>
 
         <br />
+        ไหมเห็ด กรุณายืนยันกับพนักงานหน้าร้านอีกครั้งก่อนซื้อ
         <div  style={{ overflow: "scroll" }}>
           <table className="table-auto" style={{ width: "100%" }}>
             <thead className="bg-teal-100">

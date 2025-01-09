@@ -21,6 +21,20 @@
     ]
   },
   {
+    "ENName": "Anello",
+    "THName": "อเนลโล",
+    "tags": [
+      "Fashion"
+    ]
+  },
+  {
+    "ENName": "Au Bon Pain",
+    "THName": "อุบลพรรณ",
+    "tags": [
+      "Restaurant"
+    ]
+  },
+  {
     "ENName": "Auntie Anne's",
     "THName": "อานตี้ แอนส์",
     "tags": [
@@ -43,6 +57,7 @@
   },
   {
     "ENName": "Avarin",
+    "Note": "อุปกรณ์วิ่ง",
     "THName": "อวาริน",
     "tags": [
       "Sport"
@@ -100,6 +115,7 @@
   },
   {
     "ENName": "BeNeat",
+    "Note": "แม่บ้านออนไลน์",
     "THName": "บีนีท",
     "tags": [
       "Cleaner"
@@ -124,6 +140,20 @@
     "THName": "บิ๊กคาเมร่า",
     "tags": [
       "Electronic"
+    ]
+  },
+  {
+    "ENName": "Black Canyon",
+    "THName": "แบลคแคนยอน",
+    "tags": [
+      "Restaurant"
+    ]
+  },
+  {
+    "ENName": "Bonchon",
+    "THName": "บอนชอน",
+    "tags": [
+      "Restaurant"
     ]
   },
   {
@@ -165,6 +195,14 @@
   {
     "ENName": "Casio",
     "THName": "คาซิโอ",
+    "tags": [
+      "Fashion"
+    ]
+  },
+  {
+    "ENName": "Casmo",
+    "Note": "ขายสูท",
+    "THName": "แคสโม",
     "tags": [
       "Fashion"
     ]
@@ -234,9 +272,17 @@
   },
   {
     "ENName": "Clawset.bkk",
+    "Note": "ชุดหมา ชุดแมว",
     "THName": "คลอเซ็ท",
     "tags": [
       "Pet"
+    ]
+  },
+  {
+    "ENName": "Club21",
+    "THName": "คลับยี่สิบเอ็ด",
+    "tags": [
+      "Fashion"
     ]
   },
   {
@@ -356,6 +402,13 @@
     ]
   },
   {
+    "ENName": "Frontline Thailand",
+    "THName": "ฟร้อนไลน์ ไทยแลนด์",
+    "tags": [
+      "Pet"
+    ]
+  },
+  {
     "ENName": "G2000",
     "THName": "จีสองพัน",
     "tags": [
@@ -375,6 +428,13 @@
     "THName": "โกลบอลเฮ้าส์",
     "tags": [
       "Furniture"
+    ]
+  },
+  {
+    "ENName": "Greyhound Cafe",
+    "THName": "เกรย์ฮาวคาเฟ่",
+    "tags": [
+      "Restaurant"
     ]
   },
   {
@@ -423,6 +483,7 @@
   },
   {
     "ENName": "Hush Puppies",
+    "Note": "เสื้อลายหมาหูยาน",
     "THName": "ฮัช พัพพี่ส์",
     "tags": [
       "Fashion"
@@ -465,6 +526,13 @@
     ]
   },
   {
+    "ENName": "J-mart",
+    "THName": "เจมาร์ท",
+    "tags": [
+      "Electronic"
+    ]
+  },
+  {
     "ENName": "JIB",
     "THName": "จิ๊บ",
     "tags": [
@@ -479,10 +547,24 @@
     ]
   },
   {
+    "ENName": "Jelly Bunny",
+    "THName": "เจลลี่ บันนี่",
+    "tags": [
+      "Fashion"
+    ]
+  },
+  {
     "ENName": "Jubilee Diamond",
     "THName": "จูบิลี่ ไดมอนด์",
     "tags": [
       "Jewelry"
+    ]
+  },
+  {
+    "ENName": "KAMU KAMU",
+    "THName": "คามุ คามุ",
+    "tags": [
+      "Restaurant"
     ]
   },
   {
@@ -504,6 +586,13 @@
     "THName": "เคทีออปติค",
     "tags": [
       "Glasses"
+    ]
+  },
+  {
+    "ENName": "Karayama",
+    "THName": "คารายาม่า",
+    "tags": [
+      "Restaurant"
     ]
   },
   {
@@ -531,6 +620,7 @@
   },
   {
     "ENName": "Kiani",
+    "Note": "อาหารเกาหลีร้านเหลืองๆ",
     "THName": "คีอานี",
     "tags": [
       "Restaurant"
@@ -567,6 +657,21 @@
     ]
   },
   {
+    "ENName": "LYN",
+    "Note": "ได้ทั้ง Lyn และ Lyn Around",
+    "THName": "ลิน",
+    "tags": [
+      "Fashion"
+    ]
+  },
+  {
+    "ENName": "Laem Charoen Seafood",
+    "THName": "แหลมเจริญซีฟู้ด",
+    "tags": [
+      "Restaurant"
+    ]
+  },
+  {
     "ENName": "Le Meridian Bangkok",
     "THName": "เลอ เมอริเดียน กรุงเทพ",
     "tags": [
@@ -582,6 +687,7 @@
   },
   {
     "ENName": "Louis Vuitton",
+    "Note": "",
     "THName": "หลุยส์ วิตตอง",
     "tags": [
       "Beauty",
@@ -591,6 +697,7 @@
   },
   {
     "ENName": "Luscious Creamery",
+    "Note": "ขายไอติม",
     "THName": "ลัสเชียส ครีมเมอรี่",
     "tags": [
       "Restaurant"
@@ -601,6 +708,13 @@
     "THName": "แม็คโคร ",
     "tags": [
       "Grocery"
+    ]
+  },
+  {
+    "ENName": "Matsumoto Kiyoshi",
+    "THName": "มัตสึโมโตะ คิโยชิ",
+    "tags": [
+      "Beauty"
     ]
   },
   {
@@ -628,9 +742,17 @@
   },
   {
     "ENName": "Modernform",
+    "Note": "เก้าอี้",
     "THName": "โมเดอร์นฟอร์ม",
     "tags": [
       "Furniture"
+    ]
+  },
+  {
+    "ENName": "Momo Paradise",
+    "THName": "โมโม่ พาราไดซ์",
+    "tags": [
+      "Restaurant"
     ]
   },
   {
@@ -668,9 +790,29 @@
     "ENName": "Naiin",
     "THName": "นายอินทร์",
     "tags": [
-      "Beauty",
-      "Fashion",
-      "Luxury"
+      "Book"
+    ]
+  },
+  {
+    "ENName": "Office Mate",
+    "THName": "ออฟฟิส เมท",
+    "tags": [
+      "Furniture"
+    ]
+  },
+  {
+    "ENName": "Oishi",
+    "Note": "Oishi Eaterium, Oishi Ramen, Shabushi ได้หมด",
+    "THName": "โออิชิ",
+    "tags": [
+      "Restaurant"
+    ]
+  },
+  {
+    "ENName": "On the table",
+    "THName": "ออนเดอะเทเบิล",
+    "tags": [
+      "Restaurant"
     ]
   },
   {
@@ -678,6 +820,13 @@
     "THName": "โอโตยะ",
     "tags": [
       "Restaurant"
+    ]
+  },
+  {
+    "ENName": "Oriental Princess",
+    "THName": "ออเรียลทัล ปริ๊นเซส",
+    "tags": [
+      "Beauty"
     ]
   },
   {
@@ -720,14 +869,19 @@
     "ENName": "Paul Smith",
     "THName": "พอล สมิธ",
     "tags": [
-      "Beauty",
-      "Fashion",
-      "Luxury"
+      "Fashion"
     ]
   },
   {
     "ENName": "Peppeer Lunch",
     "THName": "เปปเปอร์ลันช์",
+    "tags": [
+      "Restaurant"
+    ]
+  },
+  {
+    "ENName": "Pizza Company",
+    "THName": "พิซซ่าคอมปะนี",
     "tags": [
       "Restaurant"
     ]
@@ -786,6 +940,13 @@
     ]
   },
   {
+    "ENName": "Sabina",
+    "THName": "ซาบิน่า",
+    "tags": [
+      "Fashion"
+    ]
+  },
+  {
     "ENName": "Saemaeul",
     "THName": "แซมาอึล",
     "tags": [
@@ -801,6 +962,7 @@
   },
   {
     "ENName": "Salana",
+    "Note": "ข้าว ผลิตภัณฑ์จากข้าว",
     "THName": "ศาลานา",
     "tags": [
       "Grocery",
@@ -812,6 +974,13 @@
     "THName": "แซมโซไนต์",
     "tags": [
       "Fashion"
+    ]
+  },
+  {
+    "ENName": "Santafe Steak",
+    "THName": "ซานตาเฟ่ สเต็ก",
+    "tags": [
+      "Restaurant"
     ]
   },
   {
@@ -874,7 +1043,8 @@
     "ENName": "Skechers",
     "THName": "สเกตเชอร์",
     "tags": [
-      "Fashion"
+      "Fashion",
+      "Sport"
     ]
   },
   {
@@ -914,6 +1084,13 @@
     ]
   },
   {
+    "ENName": "Sukishi",
+    "THName": "ซูกิชิ",
+    "tags": [
+      "Restaurant"
+    ]
+  },
+  {
     "ENName": "Supersport",
     "THName": "ซูเปอร์สปอร์ต",
     "tags": [
@@ -923,6 +1100,13 @@
   {
     "ENName": "Swensens",
     "THName": "สเวนเซ่น",
+    "tags": [
+      "Restaurant"
+    ]
+  },
+  {
+    "ENName": "Tenjo",
+    "THName": "เทนโจ",
     "tags": [
       "Restaurant"
     ]
@@ -965,6 +1149,7 @@
   },
   {
     "ENName": "The Puffin House",
+    "Note": "อุปกรณ์กีฬา เดินป่า",
     "THName": "เดอะพัฟฟินเฮาส์",
     "tags": [
       "Sport"
@@ -1088,6 +1273,42 @@
     "THName": "วิสด้อม",
     "tags": [
       "Restaurant"
+    ]
+  },
+  {
+    "ENName": "Xiaomi",
+    "THName": "เสียวหมี่",
+    "tags": [
+      "Electronic"
+    ]
+  },
+  {
+    "ENName": "YWC - YW Collection",
+    "THName": "วายดับบลิวซี",
+    "tags": [
+      "Fashion",
+      "Sport"
+    ]
+  },
+  {
+    "ENName": "glassaholic",
+    "THName": "กลาสอโฮลิก",
+    "tags": [
+      "Glasses"
+    ]
+  },
+  {
+    "ENName": "havaianas",
+    "THName": "ฮาเวียนน่า",
+    "tags": [
+      "Fashion"
+    ]
+  },
+  {
+    "ENName": "holster",
+    "THName": "โฮลสเตอร์",
+    "tags": [
+      "Fashion"
     ]
   }
 ]
