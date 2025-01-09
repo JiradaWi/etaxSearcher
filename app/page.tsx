@@ -32,7 +32,7 @@ export default function Home() {
 
   const handlePageChange = (pageNumber: number) => {
     setCurrentPage(pageNumber);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -57,28 +57,35 @@ export default function Home() {
       <div style={{ margin: "2%" }}>
         <div className="grid grid-cols-4 gap-4">
           <div className="col-span-4 sm:col-span-4 md:col-span-4 lg:col-span-4 xl:col-span-4">
-            <div className="flex items-center rounded-md bg-white pl-3 outline outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
+            <div className="relative">
+              <div className="absolute inset-y-0 start-0 flex items-center ps-4 pointer-events-none">
+                <svg
+                  className="w-4 h-4 text-gray-500"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                  />
+                </svg>
+              </div>
               <input
                 onChange={(e) => setInputValue(e.target.value)}
-                type="text"
+                type="search"
                 name="searchTextbox"
                 id="searchTextbox"
-                className="block min-w-0 grow py-1.5 pl-1 pr-3 text-base text-gray-900 placeholder:text-gray-400 focus:outline focus:outline-0 sm:text-sm/6"
+                className="block w-full p-4 ps-10 text-sm text-gray-900 rounded-xl border border-gray-200 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 bg-white placeholder:text-gray-500"
                 placeholder="Search..."
+                autoComplete="off"
               />
             </div>
           </div>
-
-          {/* <div className="col-span-1 sm:col-span-4 md:col-span-4 lg:col-span-1 xl:col-span-1">
-            <button
-              style={{ width: "100%" }}
-              onClick={handleSearch}
-              type="button"
-              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-            >
-              Search
-            </button>
-          </div> */}
         </div>
         <br />
         <p className="text-gray-600 mb-4">
@@ -92,7 +99,7 @@ export default function Home() {
             >
               <div className="relative p-6">
                 <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-gray-50 via-gray-50 to-transparent rounded-bl-full opacity-50"></div>
-                
+
                 <div className="flex items-center justify-between mb-6">
                   <span className="bg-teal-50 text-teal-700 text-xs font-semibold px-3 py-1.5 rounded-lg border border-teal-100 shadow-sm">
                     #{startIndex + index + 1}
@@ -113,14 +120,27 @@ export default function Home() {
                   <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-indigo-600 transition-colors duration-200">
                     {element.THName}
                   </h3>
-                  <p className="text-gray-600 font-medium mb-4">{element.ENName}</p>
+                  <p className="text-gray-600 font-medium mb-4">
+                    {element.ENName}
+                  </p>
                   {element.Note && (
                     <div className="mt-4 pt-4 border-t border-gray-100">
                       <div className="flex items-start gap-2">
-                        <svg className="w-4 h-4 text-gray-400 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                          <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a.75.75 0 000 1.5h.253a.25.25 0 01.244.304l-.459 2.066A1.75 1.75 0 0010.747 15H11a.75.75 0 000-1.5h-.253a.25.25 0 01-.244-.304l.459-2.066A1.75 1.75 0 009.253 9H9z" clipRule="evenodd" />
+                        <svg
+                          className="w-4 h-4 text-gray-400 mt-0.5"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a.75.75 0 000 1.5h.253a.25.25 0 01.244.304l-.459 2.066A1.75 1.75 0 0010.747 15H11a.75.75 0 000-1.5h-.253a.25.25 0 01-.244-.304l.459-2.066A1.75 1.75 0 009.253 9H9z"
+                            clipRule="evenodd"
+                          />
                         </svg>
-                        <p className="text-sm text-gray-500 leading-relaxed">{element.Note}</p>
+                        <p className="text-sm text-gray-500 leading-relaxed">
+                          {element.Note}
+                        </p>
                       </div>
                     </div>
                   )}
@@ -140,7 +160,7 @@ export default function Home() {
             >
               Previous
             </button>
-            
+
             <div className="flex space-x-2">
               {Array.from({ length: Math.min(3, totalPages) }, (_, i) => {
                 let pageNumber;
@@ -168,7 +188,7 @@ export default function Home() {
                   </button>
                 );
               })}
-              
+
               {totalPages > 3 && currentPage < totalPages - 1 && (
                 <>
                   <span className="px-2 py-2 text-gray-500">...</span>
