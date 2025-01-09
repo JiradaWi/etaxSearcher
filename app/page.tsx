@@ -1,7 +1,7 @@
 "use client";
 
 import ETAXJSON from "./etaxInfo.json";
-import { ReactNode, useState, useMemo } from "react";
+import { useState, useMemo } from "react";
 
 const ITEMS_PER_PAGE = 20;
 
