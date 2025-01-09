@@ -5,92 +5,81 @@ import ETAXJSON from "./etaxInfo.json";
 import { ReactNode, useState } from "react";
 
 // const userSearch = '';
-let tableItem:  ReactNode[]= [];
+let tableItem: ReactNode[] = [];
 
 export default function Home() {
- 
-  const [inputValue, setInputValue] = useState('')
+  const [inputValue, setInputValue] = useState("");
 
-  function checkEnter(e: { keyCode: unknown; which: unknown; }){
-    const code = (e.keyCode ? e.keyCode : e.which);
-    if(code == 13) { //Enter keycode
-      handleSearch();
-    }
-
-  }
-
-  function handleSearch() {    
-    console.log('handle search 1');
+  function handleSearch() {
     const result: ReactNode[] = [];
-    let index = 1 ;
+    let index = 1;
     const searchTextUpper = inputValue.toUpperCase();
     ETAXJSON.forEach((element) => {
       const ENName = element.ENName.toUpperCase();
       const THName = element.THName.toUpperCase();
       const tags = element.tags;
 
-      const tagCMP: ReactNode[] = []; 
+      const tagCMP: ReactNode[] = [];
       if (
-          ENName.includes(searchTextUpper) ||
-          THName.includes(searchTextUpper) ||
-          tags.includes(inputValue)
+        ENName.includes(searchTextUpper) ||
+        THName.includes(searchTextUpper) ||
+        tags.includes(inputValue)
       ) {
-          // const tags: object[] = [];
-          element.tags.forEach(tag => {
-              const key = ENName + tag;
-              if(tag == 'OTOP'){
-                tagCMP.push(
-                      <button key={key} className="py-2 px-4 shadow-md bg-green-300 no-underline rounded-full text-black border-blue btn-primary hover:bg-blue-light focus:outline-none active:shadow-none mr-2">
-                          {tag}
-                      </button>
-                  );
-              }else{
-                tagCMP.push(
-                      <button key={key} className="py-2 px-4 shadow-md bg-pink-200 no-underline rounded-full text-black border-blue btn-primary hover:bg-blue-light focus:outline-none active:shadow-none mr-2">
-                          {tag}
-                      </button>
-                  );
-              }
-              
-          });
-  
-          const trkey = 'item'+index;
-          const tdkey1 = 'itemtd1'+index;
-          const tdkey2 = 'itemtd2'+index;
-          const tdkey3 = 'itemtd3'+index;
-          const tdkey4 = 'itemtd4'+index;
-          const tdkey5 = 'itemtd5'+index;
+        // const tags: object[] = [];
+        element.tags.forEach((tag) => {
+          const key = ENName + tag;
+          if (tag == "OTOP") {
+            tagCMP.push(
+              <button
+                key={key}
+                className="py-2 px-4 shadow-md bg-green-300 no-underline rounded-full text-black border-blue btn-primary hover:bg-blue-light focus:outline-none active:shadow-none mr-2"
+              >
+                {tag}
+              </button>
+            );
+          } else {
+            tagCMP.push(
+              <button
+                key={key}
+                className="py-2 px-4 shadow-md bg-pink-200 no-underline rounded-full text-black border-blue btn-primary hover:bg-blue-light focus:outline-none active:shadow-none mr-2"
+              >
+                {tag}
+              </button>
+            );
+          }
+        });
+
+        const trkey = "item" + index;
+        const tdkey1 = "itemtd1" + index;
+        const tdkey2 = "itemtd2" + index;
+        const tdkey3 = "itemtd3" + index;
+        const tdkey4 = "itemtd4" + index;
+        const tdkey5 = "itemtd5" + index;
         result.push(
           <tr key={trkey}>
-          <td key={tdkey1} className="border px-4 py-2" data-name="#">{index}</td>
-          <td key={tdkey2} className="border px-4 py-2" data-name="THNAME">{element.THName}</td>
-          <td key={tdkey3} className="border px-4 py-2" data-name="ENNAME">{element.ENName}</td>
-          <td key={tdkey4} className="border px-4 py-2" data-name="TAGS">
+            <td key={tdkey1} className="border px-4 py-2" data-name="#">
+              {index}
+            </td>
+            <td key={tdkey2} className="border px-4 py-2" data-name="THNAME">
+              {element.THName}
+            </td>
+            <td key={tdkey3} className="border px-4 py-2" data-name="ENNAME">
+              {element.ENName}
+            </td>
+            <td key={tdkey4} className="border px-4 py-2" data-name="TAGS">
               {tagCMP}
-          </td>
-          <td key={tdkey5} className="border px-4 py-2" data-name="ENNAME">{element.Note}</td>
-        </tr>
+            </td>
+            <td key={tdkey5} className="border px-4 py-2" data-name="ENNAME">
+              {element.Note}
+            </td>
+          </tr>
         );
         index++;
       }
-
-
-   
     });
-  
-   
+
     tableItem = result;
-    console.log('handle search 2');
-    // return result;
-   
   }
-
-
-
-  
-
-
-
 
   handleSearch();
 
@@ -103,12 +92,9 @@ export default function Home() {
               <div className="flex shrink-0 items-center"></div>
               <div className="hidden sm:ml-6 sm:block">
                 <div className="flex space-x-4">
-                  <span
-                    className="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
-                    aria-current="page"
-                  >
-                    ETAX Searcher
-                  </span>
+                 
+                    <span style={{color: "white"}}>ETAX Searcher</span>
+                 
                 </div>
               </div>
             </div>
@@ -122,7 +108,6 @@ export default function Home() {
             <div className="flex items-center rounded-md bg-white pl-3 outline outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
               <input
                 onChange={(e) => setInputValue(e.target.value)}
-                onKeyUp={checkEnter}
                 type="text"
                 name="searchTextbox"
                 id="searchTextbox"
@@ -145,24 +130,34 @@ export default function Home() {
         </div>
 
         <br />
-        <table className="table-auto" style={{ width: "100%" }}>
-          <thead >
-            <tr >
-              <th className="px-4 py-2" key="head1">#</th>
-              <th className="px-4 py-2" key="head2">TH Name</th>
-              <th className="px-4 py-2" key="head3">EN Name</th>
-              <th className="px-4 py-2" key="head4">Tags</th>
-              <th className="px-4 py-2" key="head5">Note</th>
-            </tr>
-          </thead>
-          <tbody>
-            {/* <TableItem key="test" searchText={userSearch}></TableItem> */}
-            {tableItem}
-           
-          </tbody>
-        </table>
+        <div  style={{ overflow: "scroll" }}>
+          <table className="table-auto" style={{ width: "100%" }}>
+            <thead className="bg-teal-100">
+              <tr>
+                <th className="px-4 py-2" key="head1">
+                  #
+                </th>
+                <th className="px-4 py-2" key="head2">
+                  TH Name
+                </th>
+                <th className="px-4 py-2" key="head3">
+                  EN Name
+                </th>
+                <th className="px-4 py-2" key="head4">
+                  Tags
+                </th>
+                <th className="px-4 py-2" key="head5">
+                  Note
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {/* <TableItem key="test" searchText={userSearch}></TableItem> */}
+              {tableItem}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );
 }
-
