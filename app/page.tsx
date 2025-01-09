@@ -1,7 +1,7 @@
 "use client";
 
 import ETAXJSON from "./etaxInfo.json";
-import { ReactNode, useState, useMemo } from "react";
+import { useState, useMemo } from "react";
 
 const ITEMS_PER_PAGE = 20;
 
@@ -10,6 +10,7 @@ export default function Home() {
   const [currentPage, setCurrentPage] = useState(1);
 
   const filteredData = useMemo(() => {
+    setCurrentPage(1);
     return ETAXJSON.filter((element) => {
       const searchTextUpper = inputValue.toUpperCase();
       const ENName = element.ENName.toUpperCase();
@@ -25,6 +26,22 @@ export default function Home() {
     });
   }, [inputValue]);
 
+  const handlePillSearch = ((pillClicked: {tag: string}) => {   
+    console.log('handlePillSearch');
+    setCurrentPage(1);
+    setInputValue(pillClicked.tag);
+   
+    return ETAXJSON.filter((element) => {
+      const tags = element.tags;
+      const result = tags.some((tag) => tag.toUpperCase().includes(pillClicked.tag));
+      return result;
+    });
+  });
+
+  const clearFilter = (() => {
+    setInputValue('');
+  })
+
   const totalPages = Math.ceil(filteredData.length / ITEMS_PER_PAGE);
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
   const endIndex = startIndex + ITEMS_PER_PAGE;
@@ -35,8 +52,11 @@ export default function Home() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+ 
+ 
+
   return (
-    <div className="">
+    <div className="bg-gray-200" >
       <nav className="bg-gray-800">
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
           <div className="relative flex h-16 items-center justify-between">
@@ -88,9 +108,17 @@ export default function Home() {
           </div>
         </div>
         <br />
-        <p className="text-gray-600 mb-4">
-          ไหมเห็ด กรุณายืนยันกับพนักงานหน้าร้านอีกครั้งก่อนซื้อ
-        </p>
+        <div className="text-gray-600 mb-4">
+          <div className="grid grid-cols-3 gap-4">
+            <div className="col-span-2"> ไหมเห็ด กรุณายืนยันกับพนักงานหน้าร้านอีกครั้งก่อนซื้อ</div>
+            <div style={{ textAlign: "right" }}>
+              <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" 
+              onClick={() => clearFilter()}>Clear Filter</button>
+            </div>
+          </div>
+
+          
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
           {currentData.map((element, index) => (
             <div
@@ -98,7 +126,7 @@ export default function Home() {
               className="group bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-gray-200 hover:-translate-y-1"
             >
               <div className="relative p-6">
-                <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-gray-50 via-gray-50 to-transparent rounded-bl-full opacity-50"></div>
+                {/* <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-gray-50 via-gray-50 to-transparent rounded-bl-full opacity-50"></div> */}
 
                 <div className="flex items-center justify-between mb-6">
                   <span className="bg-teal-50 text-teal-700 text-xs font-semibold px-3 py-1.5 rounded-lg border border-teal-100 shadow-sm">
@@ -106,12 +134,13 @@ export default function Home() {
                   </span>
                   <div className="flex flex-wrap gap-2 max-w-[70%] justify-end">
                     {element.tags.map((tag, tagIndex) => (
-                      <span
+                      <button
+                        onClick={() => handlePillSearch({tag})}
                         key={tagIndex}
                         className="bg-pink-50 text-pink-700 text-xs font-semibold px-3 py-1.5 rounded-lg border border-pink-100 shadow-sm whitespace-nowrap"
                       >
                         {tag}
-                      </span>
+                      </button>
                     ))}
                   </div>
                 </div>
@@ -212,6 +241,8 @@ export default function Home() {
           </div>
         )}
       </div>
+      <br/>
+      
     </div>
   );
 }
