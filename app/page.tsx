@@ -5,83 +5,12 @@ import ETAXJSON from "./etaxInfo.json";
 import { ReactNode, useState } from "react";
 
 // const userSearch = '';
-let tableItem: ReactNode[] = [];
+
 
 export default function Home() {
   const [inputValue, setInputValue] = useState("");
-
-  function handleSearch() {
-    const result: ReactNode[] = [];
-    let index = 1;
-    const searchTextUpper = inputValue.toUpperCase();
-    ETAXJSON.forEach((element) => {
-      const ENName = element.ENName.toUpperCase();
-      const THName = element.THName.toUpperCase();
-      const tags = element.tags;
-
-      const tagCMP: ReactNode[] = [];
-      if (
-        ENName.includes(searchTextUpper) ||
-        THName.includes(searchTextUpper) ||
-        tags.includes(inputValue)
-      ) {
-        // const tags: object[] = [];
-        element.tags.forEach((tag) => {
-          const key = ENName + tag;
-          if (tag == "OTOP") {
-            tagCMP.push(
-              <button
-                key={key}
-                className="py-2 px-4 shadow-md bg-green-300 no-underline rounded-full text-black border-blue btn-primary hover:bg-blue-light focus:outline-none active:shadow-none mr-2"
-              >
-                {tag}
-              </button>
-            );
-          } else {
-            tagCMP.push(
-              <button
-                key={key}
-                className="py-2 px-4 shadow-md bg-pink-200 no-underline rounded-full text-black border-blue btn-primary hover:bg-blue-light focus:outline-none active:shadow-none mr-2"
-              >
-                {tag}
-              </button>
-            );
-          }
-        });
-
-        const trkey = "item" + index;
-        const tdkey1 = "itemtd1" + index;
-        const tdkey2 = "itemtd2" + index;
-        const tdkey3 = "itemtd3" + index;
-        const tdkey4 = "itemtd4" + index;
-        const tdkey5 = "itemtd5" + index;
-        result.push(
-          <tr key={trkey}>
-            <td key={tdkey1} className="border px-4 py-2" data-name="#">
-              {index}
-            </td>
-            <td key={tdkey2} className="border px-4 py-2" data-name="THNAME">
-              {element.THName}
-            </td>
-            <td key={tdkey3} className="border px-4 py-2" data-name="ENNAME">
-              {element.ENName}
-            </td>
-            <td key={tdkey4} className="border px-4 py-2" data-name="TAGS">
-              {tagCMP}
-            </td>
-            <td key={tdkey5} className="border px-4 py-2" data-name="ENNAME">
-              {element.Note}
-            </td>
-          </tr>
-        );
-        index++;
-      }
-    });
-
-    tableItem = result;
-  }
-
-  handleSearch();
+  let tableItem: ReactNode[] = [];
+  handleSearch(); 
 
   return (
     <div className="">
@@ -93,7 +22,7 @@ export default function Home() {
               <div className="hidden sm:ml-6 sm:block">
                 <div className="flex space-x-4">
                  
-                    <span style={{color: "white"}}>ETAX Searcher</span>
+                    <span id="bannerText" style={{color: "white"}}>ETAX Searcher</span>
                  
                 </div>
               </div>
@@ -151,7 +80,7 @@ export default function Home() {
                 </th>
               </tr>
             </thead>
-            <tbody>
+            <tbody id="tbody">
               {/* <TableItem key="test" searchText={userSearch}></TableItem> */}
               {tableItem}
             </tbody>
@@ -160,4 +89,161 @@ export default function Home() {
       </div>
     </div>
   );
+
+  function handleSearch() {
+    const result: ReactNode[] = [];
+    let index = 1;
+    const searchTextUpper = inputValue.toUpperCase();
+    ETAXJSON.forEach((element) => {
+      const ENName = element.ENName.toUpperCase();
+      const THName = element.THName.toUpperCase();
+      const tags = element.tags;
+
+      const tagCMP: ReactNode[] = [];
+      if (
+        ENName.includes(searchTextUpper) ||
+        THName.includes(searchTextUpper) ||
+        tags.includes(inputValue)
+      ) {
+        // const tags: object[] = [];
+        element.tags.forEach( (tag: string) => {
+          const key = ENName + tag;
+          if (tag == "OTOP") {
+            tagCMP.push(
+              <button
+                key={key}
+                onClick={() => handlePillSearch( {tag})}
+                className="py-2 px-4 shadow-md bg-green-300 no-underline rounded-full text-black border-blue btn-primary hover:bg-blue-light focus:outline-none active:shadow-none mr-2"
+              >
+                {tag}
+              </button>
+            );
+          } else {
+            tagCMP.push(
+              <button
+                key={key}
+                onClick={() => handlePillSearch( {tag})}
+                className="py-2 px-4 shadow-md bg-pink-200 no-underline rounded-full text-black border-blue btn-primary hover:bg-blue-light focus:outline-none active:shadow-none mr-2"
+              >
+                {tag}
+              </button>
+            );
+          }
+        });
+
+        const trkey = "item" + index;
+        const tdkey1 = "itemtd1" + index;
+        const tdkey2 = "itemtd2" + index;
+        const tdkey3 = "itemtd3" + index;
+        const tdkey4 = "itemtd4" + index;
+        const tdkey5 = "itemtd5" + index;
+        result.push(
+          <tr key={trkey}>
+            <td key={tdkey1} className="border px-4 py-2" data-name="#">
+              {index}
+            </td>
+            <td key={tdkey2} className="border px-4 py-2" data-name="THNAME">
+              {element.THName}
+            </td>
+            <td key={tdkey3} className="border px-4 py-2" data-name="ENNAME">
+              {element.ENName}
+            </td>
+            <td key={tdkey4} className="border px-4 py-2" data-name="TAGS">
+              {tagCMP}
+            </td>
+            <td key={tdkey5} className="border px-4 py-2" data-name="ENNAME">
+              {element.Note}
+            </td>
+          </tr>
+        );
+        index++;
+      }
+    });
+
+    tableItem = result;
+  }
+
+
+  function handlePillSearch( tag: {tag: string} ) {
+    
+    setInputValue(tag.tag);
+
+    console.log('handlePillSearch');
+    const pillValue = tag.tag;
+    console.log('pillValue1: '+JSON.stringify(pillValue));
+    // console.log('pillValue2: '+e.target.innerHTML);
+    let index = 1;
+
+    const result: ReactNode[] = [];
+
+    ETAXJSON.forEach((element) => {
+      const tags = element.tags;
+          
+
+      tags.forEach((tag) => {
+        const tagCMP: ReactNode[] = [];
+        if(tag == pillValue){
+          tags.forEach( (tag: string) => {
+            const key = element.ENName + tag;
+            if (tag == "OTOP") {
+              tagCMP.push(
+                <button
+                  key={key}
+                  onClick={() => handlePillSearch( {tag})}
+                  className="py-2 px-4 shadow-md bg-green-300 no-underline rounded-full text-black border-blue btn-primary hover:bg-blue-light focus:outline-none active:shadow-none mr-2"
+                >
+                  {tag}
+                </button>
+              );
+            } else {
+              tagCMP.push(
+                <button
+                  key={key}
+                  onClick={() => handlePillSearch( {tag})}
+                  className="py-2 px-4 shadow-md bg-pink-200 no-underline rounded-full text-black border-blue btn-primary hover:bg-blue-light focus:outline-none active:shadow-none mr-2"
+                >
+                  {tag}
+                </button>
+              );
+            }
+          });
+
+
+          const trkey = "item" + index;
+          const tdkey1 = "itemtd1" + index;
+          const tdkey2 = "itemtd2" + index;
+          const tdkey3 = "itemtd3" + index;
+          const tdkey4 = "itemtd4" + index;
+          const tdkey5 = "itemtd5" + index;
+
+          index++;
+          result.push(
+            <tr key={trkey}>
+              <td key={tdkey1} className="border px-4 py-2" data-name="#">
+                {index}
+              </td>
+              <td key={tdkey2} className="border px-4 py-2" data-name="THNAME">
+                {element.THName}
+              </td>
+              <td key={tdkey3} className="border px-4 py-2" data-name="ENNAME">
+                {element.ENName}
+              </td>
+              <td key={tdkey4} className="border px-4 py-2" data-name="TAGS">
+                {tagCMP}
+              </td>
+              <td key={tdkey5} className="border px-4 py-2" data-name="ENNAME">
+                {element.Note}
+              </td>
+            </tr>
+
+          );
+        }
+      })
+    })
+    tableItem = result;
+    
+    // document.getElementById('tbody')?.tableItem);
+    console.log('end');
+      
+  }
 }
