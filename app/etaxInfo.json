@@ -99,6 +99,20 @@
     ]
   },
   {
+    "ENName": "BeNeat",
+    "THName": "บีนีท",
+    "tags": [
+      "Cleaner"
+    ]
+  },
+  {
+    "ENName": "BeTrend",
+    "THName": "บีเทรนด์",
+    "tags": [
+      "Books"
+    ]
+  },
+  {
     "ENName": "Big C",
     "THName": "บิ๊กซี ",
     "tags": [
@@ -132,6 +146,13 @@
     "THName": "ซีเจ",
     "tags": [
       "Grocery"
+    ]
+  },
+  {
+    "ENName": "CPS Chaps",
+    "THName": "ซีพีเอส แชปส์",
+    "tags": [
+      "Fashion"
     ]
   },
   {
@@ -209,6 +230,13 @@
     "THName": "คลาแรงส์ สกิน สปา",
     "tags": [
       "Spa"
+    ]
+  },
+  {
+    "ENName": "Clawset.bkk",
+    "THName": "คลอเซ็ท",
+    "tags": [
+      "Pet"
     ]
   },
   {
@@ -465,6 +493,13 @@
     ]
   },
   {
+    "ENName": "KIKO",
+    "THName": "กิโกะ",
+    "tags": [
+      "Beauty"
+    ]
+  },
+  {
     "ENName": "KT OPTIC",
     "THName": "เคทีออปติค",
     "tags": [
@@ -654,6 +689,13 @@
     ]
   },
   {
+    "ENName": "Pandora",
+    "THName": "แพนดอร่า",
+    "tags": [
+      "Jewelry"
+    ]
+  },
+  {
     "ENName": "Panpuri",
     "THName": "ปานปุรี",
     "tags": [
@@ -794,10 +836,31 @@
     ]
   },
   {
+    "ENName": "Siam Board Games",
+    "THName": "สยามบอร์ดเกม",
+    "tags": [
+      "Entertainment"
+    ]
+  },
+  {
     "ENName": "Siam Takashimaya",
     "THName": "สยาม ทากาชิมาย่า",
     "tags": [
       "Grocery"
+    ]
+  },
+  {
+    "ENName": "Sigma Sofa",
+    "THName": "ซิกม่า โซฟา",
+    "tags": [
+      "Furniture"
+    ]
+  },
+  {
+    "ENName": "Simple Haus",
+    "THName": "ซิมเปิล เฮาส์",
+    "tags": [
+      "Furniture"
     ]
   },
   {
@@ -901,12 +964,34 @@
     ]
   },
   {
+    "ENName": "The Puffin House",
+    "THName": "เดอะพัฟฟินเฮาส์",
+    "tags": [
+      "Sport"
+    ]
+  },
+  {
+    "ENName": "Tinzshop",
+    "Note": "Nintendo Switch และเกมของเค้า",
+    "THName": "ตินซ์ชอป",
+    "tags": [
+      "Entertainment"
+    ]
+  },
+  {
     "ENName": "Tom Ford",
     "THName": "ทอมฟอร์ด",
     "tags": [
       "Beauty",
       "Fashion",
       "Luxury"
+    ]
+  },
+  {
+    "ENName": "Top Charoen",
+    "THName": "แว่นทอปเจริญ",
+    "tags": [
+      "Glasses"
     ]
   },
   {
