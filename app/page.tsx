@@ -1,46 +1,121 @@
 "use client";
 
-import ETAXJSON from "./etaxInfo.json";
-import { useState, useMemo } from "react";
+import { useState, useEffect } from "react";
+
+interface Shop {
+  THName: string;
+  ENName: string;
+  tags: string[];
+  Note?: string;
+}
 
 const ITEMS_PER_PAGE = 20;
 
+const sheetUrl =
+  "https://docs.google.com/spreadsheets/d/e/2PACX-1vSOqJd4HynvRwlDiWlFtVJXqCdT_YWvkp7GZ2K8MKC0pjPzAgI2iwXNXO8V9CE3lLzbZAr3TnSdWoKL/pub?output=csv";
+
 export default function Home() {
+  const [shops, setShops] = useState<Shop[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [inputValue, setInputValue] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
 
-  const filteredData = useMemo(() => {
-    setCurrentPage(1);
-    return ETAXJSON.filter((element) => {
-      const searchTextUpper = inputValue.toUpperCase();
-      const ENName = element.ENName.toUpperCase();
-      const THName = element.THName.toUpperCase();
-      const tags = element.tags;
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(sheetUrl);
 
-      return (
-        searchTextUpper === "" ||
-        ENName.includes(searchTextUpper) ||
-        THName.includes(searchTextUpper) ||
-        tags.some((tag) => tag.toUpperCase().includes(searchTextUpper))
-      );
-    });
-  }, [inputValue]);
+        if (!response.ok) {
+          throw new Error("Failed to fetch data from Google Sheets");
+        }
 
-  const handlePillSearch = ((pillClicked: {tag: string}) => {   
-    console.log('handlePillSearch');
-    setCurrentPage(1);
-    setInputValue(pillClicked.tag);
-   
-    return ETAXJSON.filter((element) => {
-      const tags = element.tags;
-      const result = tags.some((tag) => tag.toUpperCase().includes(pillClicked.tag));
-      return result;
-    });
+        const csvData = await response.text();
+        const rows = csvData.split("\n").map((row) => row.split(","));
+
+        // Convert CSV rows to JSON
+        const headers = rows[0].map((header) => header.trim());
+        const jsonData = rows
+          .slice(1)
+          .map((row) => {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            const obj: any = {};
+            row.forEach((value, index) => {
+              const header = headers[index];
+              if (header) {
+                if (header.startsWith("tags-")) {
+                  if (!obj.tags) {
+                    obj.tags = [];
+                  }
+                  obj.tags.push(value.trim());
+                  obj.tags = obj.tags.filter(Boolean);
+                } else {
+                  obj[header] = value.trim();
+                }
+              }
+            });
+            return obj;
+          })
+          .reverse();
+
+        setShops(jsonData);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        setError("Failed to fetch data");
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="h-screen flex items-center justify-center">
+        <div className="animate-pulse">
+          <div className="w-16 h-16 border-b-2 border-gray-900 rounded-full" />
+          <div className="mt-4 text-2xl font-bold">Loading...</div>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
+  const filteredData = shops.filter((element) => {
+    const searchTextUpper = inputValue.toUpperCase();
+    const ENName = element.ENName.toUpperCase();
+    const THName = element.THName.toUpperCase();
+    const tags = element.tags;
+
+    return (
+      searchTextUpper === "" ||
+      ENName.includes(searchTextUpper) ||
+      THName.includes(searchTextUpper) ||
+      tags.some((tag) => tag.toUpperCase().includes(searchTextUpper))
+    );
   });
 
-  const clearFilter = (() => {
-    setInputValue('');
-  })
+  const handlePillSearch = (pillClicked: { tag: string }) => {
+    console.log("handlePillSearch");
+    setCurrentPage(1);
+    setInputValue(pillClicked.tag);
+
+    return filteredData.filter((element) => {
+      const tags = element.tags;
+      const result = tags.some((tag) =>
+        tag.toUpperCase().includes(pillClicked.tag)
+      );
+      return result;
+    });
+  };
+
+  const clearFilter = () => {
+    setInputValue("");
+  };
 
   const totalPages = Math.ceil(filteredData.length / ITEMS_PER_PAGE);
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
@@ -52,9 +127,8 @@ export default function Home() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
- 
   return (
-    <div className="bg-gray-200" style={{minHeight: '100vh'}} >
+    <div className="bg-gray-200" style={{ minHeight: "100vh" }}>
       <nav className="bg-gray-800">
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
           <div className="relative flex h-16 items-center justify-between">
@@ -72,8 +146,8 @@ export default function Home() {
         </div>
       </nav>
 
-      <div style={{ margin: "2%" }}>
-        <div className="grid grid-cols-4 gap-4">
+      <div>
+        <div className="grid grid-cols-4 gap-4 px-4 pt-4">
           <div className="col-span-4 sm:col-span-4 md:col-span-4 lg:col-span-4 xl:col-span-4">
             <div className="relative">
               <div className="absolute inset-y-0 start-0 flex items-center ps-4 pointer-events-none">
@@ -89,7 +163,7 @@ export default function Home() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="2"
-                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a.75.75 0 000 1.5h.253a.25.25 0 01.244.304l-.459 2.066A1.75 1.75 0 0010.747 15H11a.75.75 0 000-1.5h-.253a.25.25 0 01-.244-.304l.459-2.066A1.75 1.75 0 009.253 9H9z"
                   />
                 </svg>
               </div>
@@ -97,6 +171,7 @@ export default function Home() {
                 onChange={(e) => setInputValue(e.target.value)}
                 type="search"
                 name="searchTextbox"
+                value={inputValue}
                 id="searchTextbox"
                 className="block w-full p-4 ps-10 text-sm text-gray-900 rounded-xl border border-gray-200 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 bg-white placeholder:text-gray-500"
                 placeholder="Search..."
@@ -106,16 +181,23 @@ export default function Home() {
           </div>
         </div>
         <br />
-        <div className="text-gray-600 mb-4">
+        <div className="text-gray-600 mb-4 px-4">
           <div className="grid grid-cols-3 gap-4">
-            <div className="col-span-2"> ไหมเห็ด กรุณายืนยันกับพนักงานหน้าร้านอีกครั้งก่อนซื้อ</div>
-            <div style={{ textAlign: "right" }}>
-              <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" 
-              onClick={() => clearFilter()}>Clear Filter</button>
+            <div className="col-span-2">
+              {" "}
+              ไหมเห็ด กรุณายืนยันกับพนักงานหน้าร้านอีกครั้งก่อนซื้อ
+            </div>
+            <div className="flex justify-end ">
+              <div>
+                <button
+                  className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                  onClick={() => clearFilter()}
+                >
+                  Clear Filter
+                </button>
+              </div>
             </div>
           </div>
-
-          
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
           {currentData.map((element, index) => (
@@ -133,7 +215,7 @@ export default function Home() {
                   <div className="flex flex-wrap gap-2 max-w-[70%] justify-end">
                     {element.tags.map((tag, tagIndex) => (
                       <button
-                        onClick={() => handlePillSearch({tag})}
+                        onClick={() => handlePillSearch({ tag })}
                         key={tagIndex}
                         className="bg-pink-50 text-pink-700 text-xs font-semibold px-3 py-1.5 rounded-lg border border-pink-100 shadow-sm whitespace-nowrap"
                       >
@@ -179,7 +261,7 @@ export default function Home() {
 
         {/* Pagination */}
         {totalPages > 1 && (
-          <div className="flex justify-center items-center space-x-2 mt-8 mb-8">
+          <div className="flex justify-center items-center space-x-2 mt-8 mb-8 sticky bottom-0 bg-white p-2">
             <button
               onClick={() => handlePageChange(currentPage - 1)}
               disabled={currentPage === 1}
@@ -239,8 +321,7 @@ export default function Home() {
           </div>
         )}
       </div>
-      <br/>
-      
+      <br />
     </div>
   );
 }
