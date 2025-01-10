@@ -175,8 +175,9 @@ export default function Home() {
         <div className="text-gray-600 mb-4 px-4 py-2">
           <div className="grid grid-cols-3 gap-4">
             <div className="col-span-2">
-              {" "}
-              ไหมเห็ด กรุณายืนยันกับพนักงานหน้าร้านอีกครั้งก่อนซื้อ
+             
+              1. กรุณายืนยันกับพนักงานหน้าร้านอีกครั้งก่อนซื้อ <br/>
+              2. สถานที่ใน Google Map อาจไม่ตรงเป๊ะ 
             </div>
             <div className="flex justify-end ">
               <div>
@@ -229,12 +230,14 @@ export default function Home() {
                 </div>
 
                 <div className="relative">
-                  <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-indigo-600 transition-colors duration-200">
-                    {element.THName}
-                  </h3>
-                  <p className="text-gray-600 font-medium mb-4">
-                    {element.ENName}
-                  </p>
+                  <a href={"https://www.google.co.th/maps/search/"+element.ENName}  target="_blank" >
+                    <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-indigo-600 transition-colors duration-200">
+                      {element.THName}
+                    </h3>
+                    <p className="text-gray-600 font-medium mb-4">
+                      {element.ENName}
+                    </p>
+                  </a>
                   {element.Note && (
                     <div className="mt-4 pt-4 border-t border-gray-100">
                       <div className="flex items-start gap-2">
