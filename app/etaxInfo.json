@@ -1,5 +1,13 @@
 [
   {
+    "ENName": "-",
+    "Note": "น้ำพริก",
+    "THName": "น้ำพริกละเอียด ละออ",
+    "tags": [
+      "OTOP"
+    ]
+  },
+  {
     "ENName": "AKA",
     "THName": "อากะ",
     "tags": [
@@ -157,6 +165,13 @@
     ]
   },
   {
+    "ENName": "Boonthavorn",
+    "THName": "บุญถาวร",
+    "tags": [
+      "Furniture"
+    ]
+  },
+  {
     "ENName": "Boots",
     "THName": "บูทส์",
     "tags": [
@@ -214,6 +229,14 @@
     "THName": "เซ็นทรัล",
     "tags": [
       "Retail"
+    ]
+  },
+  {
+    "ENName": "Cerave",
+    "Note": "ชอปปี้ได้ สาขาไม่รู้",
+    "THName": "เซราวี",
+    "tags": [
+      "Beauty"
     ]
   },
   {
@@ -388,6 +411,13 @@
     ]
   },
   {
+    "ENName": "FIT Auto",
+    "THName": "ฟิตออโต้",
+    "tags": [
+      "Car"
+    ]
+  },
+  {
     "ENName": "Fitflop",
     "THName": "ฟิตฟลอป",
     "tags": [
@@ -419,6 +449,14 @@
   {
     "ENName": "Global House",
     "THName": "โกลบอลเฮ้าส์",
+    "tags": [
+      "Furniture"
+    ]
+  },
+  {
+    "ENName": "GreenyGrass",
+    "Note": "ขายหญ้าเทียม",
+    "THName": "กรีนนี่กราส",
     "tags": [
       "Furniture"
     ]
@@ -530,6 +568,13 @@
     "THName": "จิ๊บ",
     "tags": [
       "Electronic"
+    ]
+  },
+  {
+    "ENName": "Jan Florist",
+    "THName": "แจน ฟลอริสต์",
+    "tags": [
+      "Flower"
     ]
   },
   {
@@ -803,6 +848,13 @@
     ]
   },
   {
+    "ENName": "Nespresso",
+    "THName": "เนสเปรสโซ่",
+    "tags": [
+      "Grocery"
+    ]
+  },
+  {
     "ENName": "Office Mate",
     "THName": "ออฟฟิส เมท",
     "tags": [
@@ -920,6 +972,13 @@
     ]
   },
   {
+    "ENName": "Prism: Optical Lab",
+    "THName": "ปริซึม ออฟติคัล แลป",
+    "tags": [
+      "Glasses"
+    ]
+  },
+  {
     "ENName": "Puma",
     "THName": "พูม่า",
     "tags": [
@@ -947,6 +1006,14 @@
     "THName": "โรบินสัน",
     "tags": [
       "Grocery"
+    ]
+  },
+  {
+    "ENName": "S&T Design",
+    "Note": "ขายม่าน วอลเปเปอร์",
+    "THName": "gอสแอนด์ที ดีไซน์",
+    "tags": [
+      "Furniture"
     ]
   },
   {
@@ -1022,6 +1089,14 @@
     ]
   },
   {
+    "ENName": "Shnuggle",
+    "Note": "เฟอร์นิเจอร์สำหรับเด็ก",
+    "THName": "ชนักเกิล",
+    "tags": [
+      "Furniture"
+    ]
+  },
+  {
     "ENName": "Siam Board Games",
     "THName": "สยามบอร์ดเกม",
     "tags": [
@@ -1057,6 +1132,13 @@
     ]
   },
   {
+    "ENName": "Sjin Lab",
+    "THName": "สกินแลป",
+    "tags": [
+      "Beauty"
+    ]
+  },
+  {
     "ENName": "Skechers",
     "THName": "สเกตเชอร์",
     "tags": [
@@ -1077,6 +1159,13 @@
     "THName": "ส้มตำนัว",
     "tags": [
       "Restaurant"
+    ]
+  },
+  {
+    "ENName": "Sony",
+    "THName": "โซนี่",
+    "tags": [
+      "Electronic"
     ]
   },
   {
@@ -1105,6 +1194,14 @@
     "THName": "ซูกิชิ",
     "tags": [
       "Restaurant"
+    ]
+  },
+  {
+    "ENName": "Super Lock by Micron Ware",
+    "Note": "ขายชามเข้าเวฟ",
+    "THName": "ซูเปอร์ลอค",
+    "tags": [
+      "Grocery"
     ]
   },
   {
