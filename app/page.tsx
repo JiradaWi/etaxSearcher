@@ -213,15 +213,27 @@ export default function Home() {
                     #{startIndex + index + 1}
                   </span>
                   <div className="flex flex-wrap gap-2 max-w-[70%] justify-end">
-                    {element.tags.map((tag, tagIndex) => (
-                      <button
-                        onClick={() => handlePillSearch({ tag })}
-                        key={tagIndex}
-                        className="bg-pink-50 text-pink-700 text-xs font-semibold px-3 py-1.5 rounded-lg border border-pink-100 shadow-sm whitespace-nowrap"
-                      >
-                        {tag}
-                      </button>
-                    ))}
+                    {element.tags.map((tag, tagIndex) => {
+                      if(tag == 'OTOP'){
+                        return (<button
+                          onClick={() => handlePillSearch({ tag })}
+                          key={tagIndex}
+                          className="bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1.5 rounded-lg border border-blue-100 shadow-sm whitespace-nowrap"
+                        >
+                          {tag}
+                        </button>);
+                      }else{
+                        return (<button
+                          onClick={() => handlePillSearch({ tag })}
+                          key={tagIndex}
+                          className="bg-pink-50 text-pink-700 text-xs font-semibold px-3 py-1.5 rounded-lg border border-pink-100 shadow-sm whitespace-nowrap"
+                        >
+                          {tag}
+                        </button>);
+                      }
+
+                     
+                    })}
                   </div>
                 </div>
 
