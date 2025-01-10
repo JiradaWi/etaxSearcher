@@ -56,7 +56,7 @@ export default function Home() {
             });
             return obj;
           })
-          .reverse();
+       //   .reverse();
 
         setShops(jsonData);
       } catch (error) {
