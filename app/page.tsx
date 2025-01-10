@@ -1,29 +1,70 @@
 "use client";
 
-import ETAXJSON from "./etaxInfo.json";
-import { useState, useMemo } from "react";
+import { useState, useEffect } from "react";
+
+interface Shop {
+  THName: string;
+  ENName: string;
+  tags: string[];
+  Note?: string;
+}
 
 const ITEMS_PER_PAGE = 20;
 
 export default function Home() {
+  const [shops, setShops] = useState<Shop[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [inputValue, setInputValue] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
 
-  const filteredData = useMemo(() => {
-    return ETAXJSON.filter((element) => {
-      const searchTextUpper = inputValue.toUpperCase();
-      const ENName = element.ENName.toUpperCase();
-      const THName = element.THName.toUpperCase();
-      const tags = element.tags;
+  useEffect(() => {
+    const fetchShops = async () => {
+      try {
+        const response = await fetch("/api/shops");
+        if (!response.ok) {
+          throw new Error("Failed to fetch shops");
+        }
+        const data = await response.json();
+        setShops(data);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : "Failed to load shops");
+      } finally {
+        setIsLoading(false);
+      }
+    };
 
-      return (
-        searchTextUpper === "" ||
-        ENName.includes(searchTextUpper) ||
-        THName.includes(searchTextUpper) ||
-        tags.some((tag) => tag.toUpperCase().includes(searchTextUpper))
-      );
-    });
-  }, [inputValue]);
+    fetchShops();
+  }, []); // Fetch data on component mount
+
+  if (isLoading) {
+    return (
+      <div className="h-screen flex items-center justify-center">
+        <div className="animate-pulse">
+          <div className="w-16 h-16 border-b-2 border-gray-900 rounded-full" />
+          <div className="mt-4 text-2xl font-bold">Loading...</div>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+
+  const filteredData = shops.filter((element) => {
+    const searchTextUpper = inputValue.toUpperCase();
+    const ENName = element.ENName.toUpperCase();
+    const THName = element.THName.toUpperCase();
+    const tags = element.tags;
+
+    return (
+      searchTextUpper === "" ||
+      ENName.includes(searchTextUpper) ||
+      THName.includes(searchTextUpper) ||
+      tags.some((tag) => tag.toUpperCase().includes(searchTextUpper))
+    );
+  });
 
   const totalPages = Math.ceil(filteredData.length / ITEMS_PER_PAGE);
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
@@ -71,7 +112,7 @@ export default function Home() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="2"
-                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a.75.75 0 000 1.5h.253a.25.25 0 01.244.304l-.459 2.066A1.75 1.75 0 0010.747 15H11a.75.75 0 000-1.5h-.253a.25.25 0 01-.244-.304l.459-2.066A1.75 1.75 0 009.253 9H9z"
                   />
                 </svg>
               </div>
