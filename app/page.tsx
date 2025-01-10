@@ -11,6 +11,9 @@ interface Shop {
 
 const ITEMS_PER_PAGE = 20;
 
+const sheetUrl =
+  "https://docs.google.com/spreadsheets/d/e/2PACX-1vSOqJd4HynvRwlDiWlFtVJXqCdT_YWvkp7GZ2K8MKC0pjPzAgI2iwXNXO8V9CE3lLzbZAr3TnSdWoKL/pub?output=csv";
+
 export default function Home() {
   const [shops, setShops] = useState<Shop[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -19,23 +22,53 @@ export default function Home() {
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
-    const fetchShops = async () => {
+    const fetchData = async () => {
       try {
-        const response = await fetch("/api/shops");
+        const response = await fetch(sheetUrl);
+
         if (!response.ok) {
-          throw new Error("Failed to fetch shops");
+          throw new Error("Failed to fetch data from Google Sheets");
         }
-        const data = await response.json();
-        setShops(data);
-      } catch (err) {
-        setError(err instanceof Error ? err.message : "Failed to load shops");
+
+        const csvData = await response.text();
+        const rows = csvData.split("\n").map((row) => row.split(","));
+
+        // Convert CSV rows to JSON
+        const headers = rows[0].map((header) => header.trim());
+        const jsonData = rows
+          .slice(1)
+          .map((row) => {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            const obj: any = {};
+            row.forEach((value, index) => {
+              const header = headers[index];
+              if (header) {
+                if (header.startsWith("tags-")) {
+                  if (!obj.tags) {
+                    obj.tags = [];
+                  }
+                  obj.tags.push(value.trim());
+                  obj.tags = obj.tags.filter(Boolean);
+                } else {
+                  obj[header] = value.trim();
+                }
+              }
+            });
+            return obj;
+          })
+          .reverse();
+
+        setShops(jsonData);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        setError("Failed to fetch data");
       } finally {
         setIsLoading(false);
       }
     };
 
-    fetchShops();
-  }, []); // Fetch data on component mount
+    fetchData();
+  }, []);
 
   if (isLoading) {
     return (
@@ -113,8 +146,8 @@ export default function Home() {
         </div>
       </nav>
 
-      <div style={{ margin: "2%" }}>
-        <div className="grid grid-cols-4 gap-4">
+      <div>
+        <div className="grid grid-cols-4 gap-4 px-4 pt-4">
           <div className="col-span-4 sm:col-span-4 md:col-span-4 lg:col-span-4 xl:col-span-4">
             <div className="relative">
               <div className="absolute inset-y-0 start-0 flex items-center ps-4 pointer-events-none">
@@ -148,7 +181,7 @@ export default function Home() {
           </div>
         </div>
         <br />
-        <div className="text-gray-600 mb-4">
+        <div className="text-gray-600 mb-4 px-4">
           <div className="grid grid-cols-3 gap-4">
             <div className="col-span-2">
               {" "}
@@ -228,7 +261,7 @@ export default function Home() {
 
         {/* Pagination */}
         {totalPages > 1 && (
-          <div className="flex justify-center items-center space-x-2 mt-8 mb-8">
+          <div className="flex justify-center items-center space-x-2 mt-8 mb-8 sticky bottom-0 bg-white p-2">
             <button
               onClick={() => handlePageChange(currentPage - 1)}
               disabled={currentPage === 1}
