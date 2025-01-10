@@ -665,6 +665,14 @@
     ]
   },
   {
+    "ENName": "Lao Yuan",
+    "Note": "อาจจะได้แค่บางสาขา",
+    "THName": "ลาวญวน",
+    "tags": [
+      "Restaurant"
+    ]
+  },
+  {
     "ENName": "Le Meridian Bangkok",
     "THName": "เลอ เมอริเดียน กรุงเทพ",
     "tags": [
@@ -694,6 +702,14 @@
     "THName": "ลัสเชียส ครีมเมอรี่",
     "tags": [
       "Restaurant"
+    ]
+  },
+  {
+    "ENName": "MOMOKO Bag & Shoes spa",
+    "Note": "สปากระเป๋า",
+    "THName": "โมโมโกะ",
+    "tags": [
+      "Luxury"
     ]
   },
   {
@@ -904,6 +920,14 @@
     ]
   },
   {
+    "ENName": "Puma",
+    "THName": "พูม่า",
+    "tags": [
+      "Fashion",
+      "Sport"
+    ]
+  },
+  {
     "ENName": "RESTER",
     "Note": "เก้าอี้นวด",
     "THName": "เรสเตอร์",
@@ -1098,6 +1122,14 @@
     ]
   },
   {
+    "ENName": "Tammour",
+    "Note": "อาจจะได้แค่บางสาขา",
+    "THName": "ตำมั่ว",
+    "tags": [
+      "Restaurant"
+    ]
+  },
+  {
     "ENName": "Tenjo",
     "THName": "เทนโจ",
     "tags": [
@@ -1281,6 +1313,21 @@
     "tags": [
       "Fashion",
       "Sport"
+    ]
+  },
+  {
+    "ENName": "Yoshinoya",
+    "THName": "โยชิโนยะ",
+    "tags": [
+      "Restaurant"
+    ]
+  },
+  {
+    "ENName": "Zen",
+    "Note": "อาหาร ญป",
+    "THName": "เซน",
+    "tags": [
+      "Restaurant"
     ]
   },
   {
