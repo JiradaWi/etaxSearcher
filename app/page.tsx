@@ -129,26 +129,12 @@ export default function Home() {
 
   return (
     <div className="bg-gray-200" style={{ minHeight: "100vh" }}>
-      <nav className="bg-gray-800">
-        <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-          <div className="relative flex h-16 items-center justify-between">
-            <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-              <div className="flex shrink-0 items-center"></div>
-              <div className="hidden sm:ml-6 sm:block">
-                <div className="flex space-x-4">
-                  <span id="bannerText" style={{ color: "white" }}>
-                    ETAX Searcher
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-
-      <div>
-        <div className="grid grid-cols-4 gap-4 px-4 pt-4">
-          <div className="col-span-4 sm:col-span-4 md:col-span-4 lg:col-span-4 xl:col-span-4">
+      <nav className="sticky-nav">
+        <div className="nav-content flex gap-2">
+          <h1 className="text-lg text-black font-bold min-w-fit">
+            ETAX Searcher
+          </h1>
+          <div className="w-full">
             <div className="relative">
               <div className="absolute inset-y-0 start-0 flex items-center ps-4 pointer-events-none">
                 <svg
@@ -168,20 +154,21 @@ export default function Home() {
                 </svg>
               </div>
               <input
-                onChange={(e) => setInputValue(e.target.value)}
                 type="search"
                 name="searchTextbox"
-                value={inputValue}
                 id="searchTextbox"
-                className="block w-full p-4 ps-10 text-sm text-gray-900 rounded-xl border border-gray-200 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 bg-white placeholder:text-gray-500"
+                onChange={(e) => setInputValue(e.target.value)}
+                className="block w-full px-4 py-3 ps-10 text-sm text-gray-900 rounded-xl border border-gray-200 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 bg-white placeholder:text-gray-500"
                 placeholder="Search..."
                 autoComplete="off"
+                value={inputValue}
               />
             </div>
           </div>
         </div>
-        <br />
-        <div className="text-gray-600 mb-4 px-4">
+      </nav>
+      <div>
+        <div className="text-gray-600 mb-4 px-4 py-2">
           <div className="grid grid-cols-3 gap-4">
             <div className="col-span-2">
               {" "}
@@ -190,7 +177,7 @@ export default function Home() {
             <div className="flex justify-end ">
               <div>
                 <button
-                  className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                  className="text-white  bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5  dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
                   onClick={() => clearFilter()}
                 >
                   Clear Filter
@@ -270,6 +257,12 @@ export default function Home() {
             </div>
           ))}
         </div>
+
+        {currentData.length === 0 && (
+          <div className="text-center text-gray-600 mt-8">
+            No results found for {inputValue}
+          </div>
+        )}
 
         {/* Pagination */}
         {totalPages > 1 && (
