@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, KeyboardEvent, ChangeEvent } from "react";
 
 interface Shop {
   THName: string;
@@ -12,6 +12,7 @@ interface Shop {
 const ITEMS_PER_PAGE = 20;
 
 const sheetUrl =
+  // "https://docs.google.com/spreadsheets/d/e/1jmvFAnjqx4AJPuLIOWorDTppoyNM4xnJ?output=csv";
   "https://docs.google.com/spreadsheets/d/e/2PACX-1vSOqJd4HynvRwlDiWlFtVJXqCdT_YWvkp7GZ2K8MKC0pjPzAgI2iwXNXO8V9CE3lLzbZAr3TnSdWoKL/pub?output=csv";
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
   const [error, setError] = useState<string | null>(null);
   const [inputValue, setInputValue] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
+  const [filteredData, setFilteredData] = useState<Shop[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -59,6 +61,7 @@ export default function Home() {
        //   .reverse();
 
         setShops(jsonData);
+        setFilteredData(jsonData)
       } catch (error) {
         console.error("Error fetching data:", error);
         setError("Failed to fetch data");
@@ -85,36 +88,22 @@ export default function Home() {
     return <div>Error: {error}</div>;
   }
 
-  const filteredData = shops.filter((element) => {
-    const searchTextUpper = inputValue.toUpperCase();
-    const ENName = element.ENName.toUpperCase();
-    const THName = element.THName.toUpperCase();
-    const tags = element.tags;
+  const handleSearchBtn = () => {
+    handleSearch(inputValue, 'input');
+  }
 
-    return (
-      searchTextUpper === "" ||
-      ENName.includes(searchTextUpper) ||
-      THName.includes(searchTextUpper) ||
-      tags.some((tag) => tag.toUpperCase().includes(searchTextUpper))
-    );
-  });
+  const handleKeyPress = (e: KeyboardEvent<HTMLInputElement>) => {   
+    if(e.code === 'Enter' || e.code === 'NumpadEnter'){
+      handleSearch(inputValue, 'input');
+    }
+  }
 
   const handlePillSearch = (pillClicked: { tag: string }) => {
-    console.log("handlePillSearch");
-    setCurrentPage(1);
-    setInputValue(pillClicked.tag);
-
-    return filteredData.filter((element) => {
-      const tags = element.tags;
-      const result = tags.some((tag) =>
-        tag.toUpperCase().includes(pillClicked.tag)
-      );
-      return result;
-    });
+    handleSearch(pillClicked.tag, 'pill');
   };
 
   const clearFilter = () => {
-    setInputValue("");
+    handleSearch('', 'input');
   };
 
   const totalPages = Math.ceil(filteredData.length / ITEMS_PER_PAGE);
@@ -131,12 +120,46 @@ export default function Home() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const handleSearch = (searchText: string, searchType: string) => {
+    setCurrentPage(1);
+    const filteredShop: Shop[] = [];
+    const searchTextUpper = searchText.toUpperCase();
+
+    if(searchType === 'input' ){      
+      shops.forEach((element) => {        
+        const ENName = element.ENName.toUpperCase();
+        const THName = element.THName.toUpperCase();
+      
+        if(searchTextUpper === "" ||
+          ENName.includes(searchTextUpper) ||
+          THName.includes(searchTextUpper)){
+            filteredShop.push(element);
+        }
+      });
+      
+    } else if(searchType === 'pill'){
+      shops.forEach((element) => {
+        const tags = element.tags;
+        const upperTag: string[] = [];
+        tags.forEach((tag)=>{
+          upperTag.push(tag.toUpperCase());
+        })
+        if(upperTag.includes(searchTextUpper)){
+          filteredShop.push(element);
+        }
+      });
+    }
+    setFilteredData(filteredShop);
+    setInputValue(searchText);    
+  }
+
+
   return (
     <div className="bg-gray-200" style={{ minHeight: "100vh" }}>
       <nav className="sticky-nav">
         <div className="nav-content flex gap-2">
           <h1 className="text-lg text-black font-bold min-w-fit">
-            ETAX Searcher
+            ETAX
           </h1>
           <div className="w-full">
             <div className="relative">
@@ -157,16 +180,32 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <input
-                type="search"
-                name="searchTextbox"
-                id="searchTextbox"
-                onChange={(e) => setInputValue(e.target.value)}
-                className="block w-full px-4 py-3 ps-10 text-sm text-gray-900 rounded-xl border border-gray-200 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 bg-white placeholder:text-gray-500"
-                placeholder="Search..."
-                autoComplete="off"
-                value={inputValue}
-              />
+
+              <div className="grid grid-cols-4 gap-4">
+                <div className="col-span-3">
+                  <input
+                    type="search"
+                    name="searchTextbox"
+                    id="searchTextbox"
+                    onChange={(e) => setInputValue(e.target.value)}
+                    onKeyUp={(e) =>handleKeyPress(e) }
+                    className="block w-full px-4 py-3 ps-10 text-sm text-gray-900 rounded-xl border border-gray-200 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 bg-white placeholder:text-gray-500"
+                    placeholder="Search..."
+                    autoComplete="off"
+                    value={inputValue}
+                  />
+                </div>
+                <div className="col-span-1" >
+                  <button
+                    style={{ width: '100%'}}
+                    className="text-white  bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5  dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                    onClick={() => handleSearchBtn()}
+                  >
+                    Search
+                  </button>
+                </div>
+
+              </div>
             </div>
           </div>
         </div>
@@ -175,7 +214,6 @@ export default function Home() {
         <div className="text-gray-600 mb-4 px-4 py-2">
           <div className="grid grid-cols-3 gap-4">
             <div className="col-span-2">
-             
               1. กรุณายืนยันกับพนักงานหน้าร้านอีกครั้งก่อนซื้อ <br/>
               2. สถานที่ใน Google Map อาจไม่ตรงเป๊ะ 
             </div>
