@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, KeyboardEvent, ChangeEvent } from "react";
+import { useState, useEffect, KeyboardEvent } from "react";
 
 interface Shop {
   THName: string;
