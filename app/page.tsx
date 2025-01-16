@@ -12,8 +12,8 @@ interface Shop {
 const ITEMS_PER_PAGE = 20;
 
 const sheetUrl =
-  // "https://docs.google.com/spreadsheets/d/e/1jmvFAnjqx4AJPuLIOWorDTppoyNM4xnJ?output=csv";
-  "https://docs.google.com/spreadsheets/d/e/2PACX-1vSOqJd4HynvRwlDiWlFtVJXqCdT_YWvkp7GZ2K8MKC0pjPzAgI2iwXNXO8V9CE3lLzbZAr3TnSdWoKL/pub?output=csv";
+  "https://docs.google.com/spreadsheets/d/e/2PACX-1vTdvvl5XPEY6dVpi3iY7YUfWo_Oleb2mro3RxKLiGjjgNaPIbZefqdNrniE8PmMGw/pub?gid=1902185066&single=true&output=csv";
+  // "https://docs.google.com/spreadsheets/d/e/2PACX-1vSOqJd4HynvRwlDiWlFtVJXqCdT_YWvkp7GZ2K8MKC0pjPzAgI2iwXNXO8V9CE3lLzbZAr3TnSdWoKL/pub?output=csv";
 
 export default function Home() {
   const [shops, setShops] = useState<Shop[]>([]);
