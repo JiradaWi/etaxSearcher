@@ -6,6 +6,7 @@ interface Shop {
   THName: string;
   ENName: string;
   tags: string[];
+  URL?: string;
   Note?: string;
 }
 
@@ -54,7 +55,13 @@ export default function Home() {
                 } else {
                   obj[header] = value.trim();
                 }
+
+                if(!obj.URL){
+                  obj.URL = 'https://www.google.co.th/maps/search/'+obj.ENName;
+                }
               }
+
+             
             });
             return obj;
           })
@@ -266,7 +273,7 @@ export default function Home() {
                 </div>
 
                 <div className="relative">
-                  <a href={"https://www.google.co.th/maps/search/"+element.ENName}  target="_blank" >
+                  <a href={element.URL}  target="_blank" >
                     <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-indigo-600 transition-colors duration-200">
                       {element.THName}
                     </h3>
