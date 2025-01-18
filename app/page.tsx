@@ -111,9 +111,7 @@ export default function Home() {
   const endIndex = startIndex + ITEMS_PER_PAGE;
   const currentData = filteredData.slice(startIndex, endIndex);
 
-  if(currentData.length == 0){
-    setCurrentPage(1);
-  }
+ 
 
   const handlePageChange = (pageNumber: number) => {
     setCurrentPage(pageNumber);
