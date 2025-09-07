@@ -1,11 +1,12 @@
 "use client";
 
 import { useState, useEffect, KeyboardEvent } from "react";
+import ETAXJSON from "./etaxInfo.json";
 
 interface Shop {
   THName: string;
   ENName: string;
-  tags: string[];
+  tags?: string[];
   URL?: string;
   Note?: string;
 }
@@ -14,8 +15,7 @@ const ITEMS_PER_PAGE = 20;
 
 const sheetUrl =
   "https://docs.google.com/spreadsheets/d/e/2PACX-1vTdvvl5XPEY6dVpi3iY7YUfWo_Oleb2mro3RxKLiGjjgNaPIbZefqdNrniE8PmMGw/pub?gid=1902185066&single=true&output=csv";
-  // "https://docs.google.com/spreadsheets/d/e/2PACX-1vSOqJd4HynvRwlDiWlFtVJXqCdT_YWvkp7GZ2K8MKC0pjPzAgI2iwXNXO8V9CE3lLzbZAr3TnSdWoKL/pub?output=csv";
-
+ 
 export default function Home() {
   const [shops, setShops] = useState<Shop[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -38,33 +38,62 @@ export default function Home() {
 
         // Convert CSV rows to JSON
         const headers = rows[0].map((header) => header.trim());
-        const jsonData = rows
-          .slice(1)
-          .map((row) => {
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            const obj: any = {};
-            row.forEach((value, index) => {
-              const header = headers[index];
-              if (header) {
-                if (header.startsWith("tags-")) {
-                  if (!obj.tags) {
-                    obj.tags = [];
-                  }
-                  obj.tags.push(value.trim());
-                  obj.tags = obj.tags.filter(Boolean);
-                } else {
-                  obj[header] = value.trim();
-                }
+        // const jsonData = rows
+        //   .slice(1)
+        //   .map((row) => {
+        //     // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        //     const obj: any = {};
+        //     row.forEach((value, index) => {
+        //       const header = headers[index];
+        //       if (header) {
+        //         if (header.startsWith("tags-")) {
+        //           if (!obj.tags) {
+        //             obj.tags = [];
+        //           }
+        //           obj.tags.push(value.trim());
+        //           obj.tags = obj.tags.filter(Boolean);
+        //         } else {
+        //           obj[header] = value.trim();
+        //         }
 
-                if(!obj.URL){
-                  obj.URL = 'https://www.google.co.th/maps/search/'+obj.ENName;
-                }
-              }
+        //         if(!obj.URL){
+        //           obj.URL = 'https://www.google.co.th/maps/search/'+obj.ENName;
+        //         }
+        //       }
 
              
-            });
-            return obj;
-          })
+        //     });
+        //     return obj;
+        //   })
+        const jsonData: Shop[] = [];
+        ETAXJSON.forEach((element) => {
+          const ENName = element.ENName.toUpperCase();
+          const THName = element.THName.toUpperCase();
+
+          const URL = element.URL;
+          const note = element.Note;
+
+          const tag1 = element.tag1;
+          const tag2 = element.tag2;
+          const tag3 = element.tag3;
+
+          const tagList: string[] = [];
+          if(tag1 != ''){
+            tagList.push(tag1);
+          }
+
+          if(tag2 != ''){
+            tagList.push(tag2);
+          }
+
+          if(tag3 != ''){
+            tagList.push(tag3);
+          }
+
+          const record: Shop = {ENName : ENName, THName : THName, tags : tagList, URL: URL, Note: note};
+ 
+          jsonData.push(record);
+        });
        //   .reverse();
 
         setShops(jsonData);
