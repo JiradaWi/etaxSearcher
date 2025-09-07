@@ -175,7 +175,7 @@ export default function Home() {
       shops.forEach((element) => {
         const tags = element.tags;
         const upperTag: string[] = [];
-        tags.forEach((tag)=>{
+        tags?.forEach((tag)=>{
           upperTag.push(tag.toUpperCase());
         })
         if(upperTag.includes(searchTextUpper)){
@@ -277,7 +277,7 @@ export default function Home() {
                     #{startIndex + index + 1}
                   </span>
                   <div className="flex flex-wrap gap-2 max-w-[70%] justify-end">
-                    {element.tags.map((tag, tagIndex) => {
+                    {element.tags?.map((tag, tagIndex) => {
                       if(tag == 'OTOP'){
                         return (<button
                           onClick={() => handlePillSearch({ tag })}
