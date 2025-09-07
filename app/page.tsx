@@ -33,11 +33,11 @@ export default function Home() {
           throw new Error("Failed to fetch data from Google Sheets");
         }
 
-        const csvData = await response.text();
-        const rows = csvData.split("\n").map((row) => row.split(","));
+        // const csvData = await response.text();
+        // const rows = csvData.split("\n").map((row) => row.split(","));
 
         // Convert CSV rows to JSON
-        const headers = rows[0].map((header) => header.trim());
+        // const headers = rows[0].map((header) => header.trim());
         // const jsonData = rows
         //   .slice(1)
         //   .map((row) => {
